@@ -4,7 +4,6 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initSnowCanvas();
   initProgressBar();
   initMobileDrawer();
   initScrollSpy();
@@ -16,60 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ==========================================
-// 1. AMBIENT SNOW PARTICLES
+// 1. AMBIENT SNOW PARTICLES (DISABLED)
 // ==========================================
 function initSnowCanvas() {
-  const canvas = document.getElementById('snow-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  
-  let width = canvas.width = window.innerWidth;
-  let height = canvas.height = window.innerHeight;
-
-  window.addEventListener('resize', () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-  });
-
-  const numFlakes = 50;
-  const flakes = [];
-
-  for (let i = 0; i < numFlakes; i++) {
-    flakes.push({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      radius: Math.random() * 2.2 + 0.8,
-      speedY: Math.random() * 0.7 + 0.3,
-      speedX: (Math.random() - 0.5) * 0.4,
-      opacity: Math.random() * 0.5 + 0.2
-    });
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, width, height);
-    ctx.fillStyle = 'white';
-
-    for (let f of flakes) {
-      ctx.beginPath();
-      ctx.arc(f.x, f.y, f.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255, 255, 255, ${f.opacity})`;
-      ctx.fill();
-
-      f.y += f.speedY;
-      f.x += f.speedX;
-
-      if (f.y > height) {
-        f.y = -5;
-        f.x = Math.random() * width;
-      }
-      if (f.x > width) f.x = 0;
-      if (f.x < 0) f.x = width;
-    }
-
-    requestAnimationFrame(draw);
-  }
-
-  draw();
+  // Background snowfall animation removed as requested
 }
 
 // ==========================================
