@@ -9,9 +9,9 @@
   /* Color Palette */
   --bg-primary: #070b12;
   --bg-secondary: #0d1524;
-  --bg-card: rgba(15, 25, 45, 0.75);
-  --bg-card-hover: rgba(23, 37, 66, 0.85);
-  --bg-glass: rgba(13, 22, 38, 0.65);
+  --bg-card: rgba(13, 22, 38, 0.94);
+  --bg-card-hover: rgba(20, 34, 58, 0.98);
+  --bg-glass: rgba(13, 22, 38, 0.92);
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-highlight: rgba(56, 189, 248, 0.3);
   --border-gold: rgba(245, 158, 11, 0.4);
@@ -60,7 +60,14 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+  scroll-padding-top: 76px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -129,7 +136,7 @@ h1, h2, h3, h4, h5 {
   -webkit-text-fill-color: transparent;
 }
 
-/* Top Progress Bar */
+/* Top Progress Bar - Hardware Accelerated */
 .scroll-progress-bar {
   position: fixed;
   top: 0;
@@ -138,7 +145,9 @@ h1, h2, h3, h4, h5 {
   background: linear-gradient(90deg, var(--neogen-blue), var(--spruce-green), var(--rocky-gold));
   z-index: 1001;
   width: 0%;
-  transition: width 0.1s ease-out;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: width;
 }
 
 /* ==========================================================================
@@ -148,12 +157,15 @@ h1, h2, h3, h4, h5 {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(7, 11, 18, 0.92);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(7, 11, 18, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding: 10px 0;
-  transition: var(--transition);
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform;
+  transition: padding 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .site-header.scrolled {
@@ -639,11 +651,10 @@ h1, h2, h3, h4, h5 {
   align-items: center;
   gap: 16px;
   padding: 14px 18px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(15, 23, 42, 0.88);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   margin-bottom: 28px;
-  backdrop-filter: blur(10px);
 }
 
 .am-avatar-circle {
@@ -758,8 +769,7 @@ h1, h2, h3, h4, h5 {
   left: 6px;
   font-size: 10px;
   font-weight: 600;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.85);
   padding: 2px 6px;
   border-radius: 4px;
   color: var(--text-gold);
@@ -770,6 +780,7 @@ h1, h2, h3, h4, h5 {
   padding: 70px 0;
   border-bottom: 1px solid var(--border-subtle);
   position: relative;
+  contain: layout style;
 }
 
 .section-header {
@@ -800,21 +811,19 @@ h1, h2, h3, h4, h5 {
   line-height: 1.6;
 }
 
-/* Glass Cards */
+/* Glass Cards - Hardware Accelerated Crisp Surfaces (No Jitter) */
 .glass-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 24px;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  transition: var(--transition);
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   position: relative;
 }
 
 .glass-card:hover {
   background: var(--bg-card-hover);
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.18);
   box-shadow: var(--shadow-sm);
 }
 
@@ -1048,9 +1057,7 @@ h1, h2, h3, h4, h5 {
   flex-direction: column;
   gap: 6px;
   margin-bottom: 26px;
-  background: rgba(6, 11, 20, 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(6, 11, 20, 0.88);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   padding: 10px 14px;
@@ -2081,7 +2088,6 @@ h1, h2, h3, h4, h5 {
   text-transform: uppercase;
   color: var(--text-gold);
   box-shadow: 0 0 16px rgba(245, 158, 11, 0.08);
-  backdrop-filter: blur(8px);
 }
 
 .divider-badge .sparkle {

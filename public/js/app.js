@@ -4,9 +4,8 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initProgressBar();
+  initUnifiedScrollEngine();
   initMobileDrawer();
-  initScrollSpy();
   initBeatsExplorer();
   initConfigurator();
   initSignaturePad();
@@ -22,23 +21,128 @@ function initSnowCanvas() {
 }
 
 // ==========================================
-// 2. SCROLL PROGRESS BAR & HEADER BEHAVIOR
+// 2. UNIFIED HIGH-PERFORMANCE SCROLL ENGINE (60 FPS OPTIMIZED)
 // ==========================================
-function initProgressBar() {
+function initUnifiedScrollEngine() {
   const bar = document.getElementById('progressBar');
   const header = document.getElementById('siteHeader');
+  const navLinks = Array.from(document.querySelectorAll('.nav-menu .nav-link'));
+  const sectionElements = Array.from(document.querySelectorAll('section[id]'));
 
+  // Cached layout metrics to prevent layout thrashing on every scroll tick
+  let cachedSections = [];
+  let docHeight = 0;
+  let isTicking = false;
+  let isHeaderScrolled = false;
+  let activeSectionId = '';
+
+  function measureLayout() {
+    const scrollY = window.scrollY || window.pageYOffset || 0;
+    const bodyHeight = document.body.scrollHeight || 0;
+    const docElHeight = document.documentElement.scrollHeight || 0;
+    docHeight = Math.max(bodyHeight, docElHeight) - window.innerHeight;
+
+    cachedSections = sectionElements.map(el => {
+      const rect = el.getBoundingClientRect();
+      const top = rect.top + scrollY;
+      return {
+        id: el.getAttribute('id'),
+        top: top,
+        bottom: top + rect.height
+      };
+    });
+  }
+
+  // Initial layout measurement
+  measureLayout();
+
+  // Re-measure on window load and debounced resize
+  window.addEventListener('load', measureLayout, { passive: true });
+
+  let resizeTimer = null;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(measureLayout, 150);
+  }, { passive: true });
+
+  // Single RAF-throttled scroll frame
+  function onScrollFrame() {
+    const scrollY = window.scrollY || window.pageYOffset || 0;
+
+    // 1. Progress Bar Update (pure transform/width without CSS transition lag)
+    if (bar && docHeight > 0) {
+      const progress = Math.min(100, Math.max(0, (scrollY / docHeight) * 100));
+      bar.style.width = `${progress}%`;
+    }
+
+    // 2. Sticky Header Scrolled Class (state-guarded to prevent DOM thrashing)
+    const shouldBeScrolled = scrollY > 40;
+    if (shouldBeScrolled !== isHeaderScrolled) {
+      isHeaderScrolled = shouldBeScrolled;
+      if (header) {
+        if (isHeaderScrolled) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }
+    }
+
+    // 3. ScrollSpy Active Link (only mutate DOM when active section ID actually changes)
+    const probe = scrollY + 140;
+    let currentId = '';
+    for (let i = 0; i < cachedSections.length; i++) {
+      const sec = cachedSections[i];
+      if (probe >= sec.top && probe < sec.bottom) {
+        currentId = sec.id;
+        break;
+      }
+    }
+
+    if (currentId && currentId !== activeSectionId) {
+      activeSectionId = currentId;
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === `#${activeSectionId}`) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+
+    isTicking = false;
+  }
+
+  // Passive event listener: never blocks main browser scroll thread
   window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = (scrollTop / docHeight) * 100;
-    if (bar) bar.style.width = `${progress}%`;
+    if (!isTicking) {
+      isTicking = true;
+      requestAnimationFrame(onScrollFrame);
+    }
+  }, { passive: true });
 
-    if (header) {
-      if (scrollTop > 40) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
+  // 4. Smooth Anchor Link Scrolling with Sticky Header Offset
+  document.addEventListener('click', (e) => {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (!anchor) return;
+
+    const href = anchor.getAttribute('href');
+    if (!href || href === '#' || href.length <= 1) return;
+
+    const targetEl = document.querySelector(href);
+    if (targetEl) {
+      e.preventDefault();
+      const headerOffset = 76;
+      const elementTop = targetEl.getBoundingClientRect().top + (window.scrollY || window.pageYOffset);
+      window.scrollTo({
+        top: Math.max(0, elementTop - headerOffset),
+        behavior: 'smooth'
+      });
+
+      // Automatically close mobile navigation drawer if open
+      if (typeof window.closeMobileDrawer === 'function') {
+        window.closeMobileDrawer();
       }
     }
   });
@@ -80,35 +184,6 @@ function initMobileDrawer() {
   drawerLinks.forEach(link => {
     link.addEventListener('click', () => {
       closeDrawer();
-    });
-  });
-}
-
-// ==========================================
-// 2C. SCROLL SPY ACTIVE NAV LINK
-// ==========================================
-function initScrollSpy() {
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-menu .nav-link');
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    const scrollPosition = window.scrollY + 120;
-
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-        current = section.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      const href = link.getAttribute('href');
-      if (href && href === `#${current}`) {
-        link.classList.add('active');
-      }
     });
   });
 }
@@ -192,16 +267,16 @@ function initBeatsExplorer() {
 // 4. INTERACTIVE SOW CONFIGURATOR
 // ==========================================
 let currentConfig = {
-  baseName: "Festival Proof-of-Concept Pilot (3–5 Min)",
-  basePrice: 4950,
-  baseTimeline: "5–6 Weeks",
-  voName: "Pro Indie Multi-Voice Ensemble (3 Actors)",
-  voPrice: 850,
+  baseName: "Streamline Master: Full Movie + 10 Viral Highlights (16:9 + 9:16)",
+  basePrice: 25950,
+  baseTimeline: "18 Weeks (Full Movie + 10 Highlights)",
+  voName: "Dedicated 6-Actor Voice Cast + Bespoke Sound Effects & SFX (Included in Flagship Suite)",
+  voPrice: 0,
   addons: [],
-  subtotal: 5800,
+  subtotal: 25950,
   discount: 0,
-  total: 5800,
-  deposit: 1450
+  total: 25950,
+  deposit: 12975
 };
 
 function initConfigurator() {
@@ -287,12 +362,56 @@ function initConfigurator() {
 
   function updatePricing() {
     const selectedBase = document.querySelector('input[name="base_pkg"]:checked');
-    const selectedVO = document.querySelector('input[name="vo_tier"]:checked');
     const checkedAddons = document.querySelectorAll('input[name="addon_opt"]:checked');
 
-    let baseVal = selectedBase ? parseInt(selectedBase.value, 10) : 8850;
-    let voVal = selectedVO ? parseInt(selectedVO.value, 10) : 850;
-    
+    let baseVal = selectedBase ? parseInt(selectedBase.value, 10) : 25950;
+    const isStreamline = (baseVal === 25950);
+
+    const voStreamlineOpt = document.getElementById('opt_vo_streamline');
+    const voStd3 = document.getElementById('opt_vo_standard_3actor');
+    const voStd6 = document.getElementById('opt_vo_standard_6actor');
+
+    let voVal = 0;
+    let voName = "Dedicated 6-Actor Voice Cast + Bespoke Sound Effects & SFX (Included in Flagship Suite)";
+
+    if (isStreamline) {
+      if (voStreamlineOpt) {
+        voStreamlineOpt.style.display = 'flex';
+        voStreamlineOpt.classList.add('selected');
+        const r = voStreamlineOpt.querySelector('input');
+        if (r) r.checked = true;
+      }
+      if (voStd3) {
+        voStd3.style.display = 'none';
+        voStd3.classList.remove('selected');
+      }
+      if (voStd6) {
+        voStd6.style.display = 'none';
+        voStd6.classList.remove('selected');
+      }
+      voVal = 0;
+      voName = "Dedicated 6-Actor Voice Cast + Bespoke Sound Effects & SFX (Included in Flagship Suite)";
+    } else {
+      if (voStreamlineOpt) {
+        voStreamlineOpt.style.display = 'none';
+        voStreamlineOpt.classList.remove('selected');
+      }
+      if (voStd3) voStd3.style.display = 'flex';
+      if (voStd6) voStd6.style.display = 'flex';
+
+      let selectedVO = document.querySelector('input[name="vo_tier"]:checked');
+      if (!selectedVO || selectedVO.value === "0") {
+        const defInput = voStd3 ? voStd3.querySelector('input') : null;
+        if (defInput) {
+          defInput.checked = true;
+          voStd3.classList.add('selected');
+          selectedVO = defInput;
+        }
+      }
+      voVal = selectedVO ? parseInt(selectedVO.value, 10) : 850;
+      voName = selectedVO ? selectedVO.getAttribute('data-name') : "Pro Indie Multi-Voice Ensemble (3 Actors)";
+    }
+
     currentConfig.basePrice = baseVal;
     currentConfig.baseName = selectedBase ? selectedBase.getAttribute('data-name') : "2D Animation";
     
@@ -306,7 +425,7 @@ function initConfigurator() {
     else currentConfig.baseTimeline = "6–8 Weeks";
 
     currentConfig.voPrice = voVal;
-    currentConfig.voName = selectedVO ? selectedVO.getAttribute('data-name') : "VO Tier";
+    currentConfig.voName = voName;
 
     currentConfig.addons = [];
     let addonsTotal = 0;
@@ -359,6 +478,10 @@ function initConfigurator() {
     const billList = document.getElementById('billItemsList');
     if (!billList) return;
 
+    const voDisplayPrice = currentConfig.voPrice === 0 
+      ? '<span style="color: #34d399; font-weight: 700;">INCLUDED ($0)</span>' 
+      : `$${currentConfig.voPrice.toLocaleString()}`;
+
     billList.innerHTML = `
       <li>
         <span class="item-name">${currentConfig.baseName}</span>
@@ -366,7 +489,7 @@ function initConfigurator() {
       </li>
       <li>
         <span class="item-name">${currentConfig.voName}</span>
-        <span class="item-val">$${currentConfig.voPrice.toLocaleString()}</span>
+        <span class="item-val">${voDisplayPrice}</span>
       </li>
     `;
 
@@ -848,8 +971,9 @@ const PACKAGES_DATA = {
       deliverables: [
         'Single continuous 40-minute animated feature special in 4K UHD (3840×2160)',
         '10 dedicated standalone 30–60s viral highlight clips in 9:16 Vertical for YouTube Shorts',
+        'Full dedicated 6-actor professional voice cast ensemble INCLUDED ($0 extra)',
+        'Bespoke sound effects (SFX), atmospheric Foley & Dolby 5.1 surround sound INCLUDED ($0 extra)',
         'Over 70 custom painted 4K forest & Rockefeller Center matte environments',
-        'Full dedicated 6-actor professional voice cast recording & character model sheets',
         'Full symphonic holiday score orchestration & Dolby 5.1 surround / stereo mixdown',
         '5 custom high-CTR painted thumbnails for YouTube A/B testing & Premiere countdown',
         'Direct pinned link & description funnel to purchase author\'s published book on Amazon',
@@ -926,8 +1050,9 @@ const PACKAGES_DATA = {
       deliverables: [
         'Continuous 40-minute animated feature special in Mobile 4K (2160×3840 @ 60fps)',
         '10 dedicated standalone 30–60s viral highlight clips for YouTube Shorts & Reels',
+        'Full dedicated 6-actor professional voice cast ensemble INCLUDED ($0 extra)',
+        'Bespoke sound effects (SFX), atmospheric Foley & stereo mix INCLUDED ($0 extra)',
         'Dynamic pan-and-scan camera motion keeping characters center-stage on mobile screens',
-        'Full dedicated 6-actor professional voice cast recording & character dialogue acting',
         'Full holiday orchestration score, audio sound bite stems & sound effects',
         'Burned-in kinetic dynamic typography on all 10 highlights with pinned Amazon book link',
         'Turnaround: 16 Weeks structured delivery with rolling highlight releases'
