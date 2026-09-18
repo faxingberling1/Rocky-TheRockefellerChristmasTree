@@ -296,7 +296,8 @@ function initConfigurator() {
     currentConfig.basePrice = baseVal;
     currentConfig.baseName = selectedBase ? selectedBase.getAttribute('data-name') : "2D Animation";
     
-    if (baseVal === 24500) currentConfig.baseTimeline = "16–18 Weeks";
+    if (baseVal === 25950) currentConfig.baseTimeline = "18 Weeks (Full Movie + 10 Highlights)";
+    else if (baseVal === 24500) currentConfig.baseTimeline = "16–18 Weeks";
     else if (baseVal === 21800) currentConfig.baseTimeline = "12–14 Weeks (Rolling Deliveries)";
     else if (baseVal === 4950) currentConfig.baseTimeline = "5–6 Weeks";
     else if (baseVal === 19500) currentConfig.baseTimeline = "14–16 Weeks";
@@ -735,6 +736,21 @@ function filterYouTubeFormat(format, btn) {
 
   const groupLandscape = document.getElementById('formatGroupLandscape');
   const groupPortrait = document.getElementById('formatGroupPortrait');
+  const cardStreamline = document.getElementById('pkg-card-streamline-master');
+
+  if (format === 'streamline') {
+    if (groupLandscape) groupLandscape.style.display = 'block';
+    if (groupPortrait) groupPortrait.style.display = 'block';
+    if (cardStreamline) {
+      cardStreamline.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      cardStreamline.style.boxShadow = '0 0 45px rgba(245, 158, 11, 0.6)';
+      setTimeout(() => {
+        cardStreamline.style.boxShadow = '';
+      }, 2500);
+    }
+    showToast('Displaying: Streamline Master Package (Full Movie + 10 Highlights)');
+    return;
+  }
 
   if (format === 'landscape') {
     if (groupLandscape) {
@@ -820,6 +836,26 @@ const PACKAGES_DATA = {
   landscape: {
     formatName: 'Landscape YouTube (16:9 Cinema 4K UHD)',
     aspectRatio: '16:9 Cinema 4K UHD',
+    streamline: {
+      key: 'streamline_master',
+      title: 'Streamline Master: Full 40-Min Movie + 10 Viral Highlights',
+      shortName: 'Streamline Master: Full Movie + 10 Viral Highlights (16:9 + 9:16)',
+      price: 25950,
+      format: 'landscape',
+      type: 'streamline',
+      resolution: 'Resolution: 16:9 Cinema 4K UHD (Movie) + 9:16 Mobile 4K (10 Highlights)',
+      depositNote: '50% Kickoff Deposit: $12,975 • two 25% review gates of $6,487.50',
+      deliverables: [
+        'Single continuous 40-minute animated feature special in 4K UHD (3840×2160)',
+        '10 dedicated standalone 30–60s viral highlight clips in 9:16 Vertical for YouTube Shorts',
+        'Over 70 custom painted 4K forest & Rockefeller Center matte environments',
+        'Full dedicated 6-actor professional voice cast recording & character model sheets',
+        'Full symphonic holiday score orchestration & Dolby 5.1 surround / stereo mixdown',
+        '5 custom high-CTR painted thumbnails for YouTube A/B testing & Premiere countdown',
+        'Direct pinned link & description funnel to purchase author\'s published book on Amazon',
+        'Turnaround: 18 Weeks structured master delivery with rolling highlight releases'
+      ]
+    },
     full: {
       key: 'landscape_full',
       title: 'Full 40-Minute Animated Family Feature Special',
@@ -878,6 +914,25 @@ const PACKAGES_DATA = {
   portrait: {
     formatName: 'Portrait YouTube (9:16 Shorts & Mobile Fullscreen)',
     aspectRatio: '9:16 Mobile 4K / FHD',
+    streamline: {
+      key: 'streamline_master',
+      title: 'Streamline Master: Full Mobile Movie + 10 Viral Highlights',
+      shortName: 'Streamline Master: Full Mobile Movie + 10 Viral Highlights (9:16 Mobile 4K)',
+      price: 21950,
+      format: 'portrait',
+      type: 'streamline',
+      resolution: 'Resolution: 2160×3840 Vertical 4K @ 60fps • 40m Movie + 10 Shorts',
+      depositNote: '50% Kickoff Deposit: $10,975 • two 25% review gates of $5,487.50',
+      deliverables: [
+        'Continuous 40-minute animated feature special in Mobile 4K (2160×3840 @ 60fps)',
+        '10 dedicated standalone 30–60s viral highlight clips for YouTube Shorts & Reels',
+        'Dynamic pan-and-scan camera motion keeping characters center-stage on mobile screens',
+        'Full dedicated 6-actor professional voice cast recording & character dialogue acting',
+        'Full holiday orchestration score, audio sound bite stems & sound effects',
+        'Burned-in kinetic dynamic typography on all 10 highlights with pinned Amazon book link',
+        'Turnaround: 16 Weeks structured delivery with rolling highlight releases'
+      ]
+    },
     full: {
       key: 'portrait_full',
       title: 'Full 40-Minute Mobile Vertical Feature Cut',
@@ -936,7 +991,7 @@ const PACKAGES_DATA = {
 };
 
 let currentModalFormat = 'landscape';
-let currentModalType = 'full';
+let currentModalType = 'streamline';
 
 function openPackageModal() {
   const modal = document.getElementById('packageModal');
@@ -960,6 +1015,7 @@ function setModalFormat(format) {
 
 function setModalType(type) {
   currentModalType = type;
+  document.getElementById('modalCardTypeStreamline')?.classList.toggle('active', type === 'streamline');
   document.getElementById('modalCardTypeFull')?.classList.toggle('active', type === 'full');
   document.getElementById('modalCardTypeParts')?.classList.toggle('active', type === 'parts');
   document.getElementById('modalCardTypeHighlights')?.classList.toggle('active', type === 'highlights');
@@ -969,16 +1025,19 @@ function setModalType(type) {
 function renderPackageModal() {
   const formatData = PACKAGES_DATA[currentModalFormat];
   if (!formatData) return;
-  const pkg = formatData[currentModalType];
+  const pkg = formatData[currentModalType] || formatData.streamline || formatData.full;
 
+  const streamlinePkg = formatData.streamline;
   const fullPkg = formatData.full;
   const partsPkg = formatData.parts;
   const highlightsPkg = formatData.highlights;
 
+  const priceStreamline = document.getElementById('modalTypePriceStreamline');
   const priceFull = document.getElementById('modalTypePriceFull');
   const priceParts = document.getElementById('modalTypePriceParts');
   const priceHighlights = document.getElementById('modalTypePriceHighlights');
 
+  if (priceStreamline && streamlinePkg) priceStreamline.innerText = `$${streamlinePkg.price.toLocaleString()}`;
   if (priceFull) priceFull.innerText = `$${fullPkg.price.toLocaleString()}`;
   if (priceParts) priceParts.innerText = `$${partsPkg.price.toLocaleString()}`;
   if (priceHighlights) priceHighlights.innerText = `$${highlightsPkg.price.toLocaleString()}`;
@@ -1035,6 +1094,13 @@ function selectPackageFromCard(format, type) {
 }
 
 function selectPackageByData(pkg) {
+  if (typeof pkg === 'string') {
+    if (pkg === 'streamline_master') {
+      pkg = PACKAGES_DATA.landscape.streamline;
+    }
+  }
+  if (!pkg) return;
+
   const targetId = `opt_${pkg.key}`;
   const targetRadio = document.getElementById(targetId)?.querySelector('input[type="radio"]');
   const allRadios = document.querySelectorAll('input[name="base_pkg"]');
@@ -1057,6 +1123,9 @@ function selectPackageByData(pkg) {
   if (typeof window.triggerConfigUpdate === 'function') {
     window.triggerConfigUpdate();
   }
+  showToast(`✓ Selected: ${pkg.title} ($${pkg.price.toLocaleString()})`);
+  const configurator = document.getElementById('configurator');
+  if (configurator) configurator.scrollIntoView({ behavior: 'smooth' });
 }
 
 // Make globally accessible

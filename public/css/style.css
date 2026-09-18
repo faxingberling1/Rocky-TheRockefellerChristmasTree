@@ -2845,6 +2845,152 @@ h1, h2, h3, h4, h5 {
   transform: translateY(-2px);
 }
 
+/* STREAMLINE MASTER PACKAGE SHOWCASE CARD */
+.streamline-master-card {
+  background: linear-gradient(135deg, rgba(15, 25, 45, 0.96) 0%, rgba(20, 36, 62, 0.98) 50%, rgba(13, 23, 40, 0.96) 100%);
+  border: 2px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 30px 34px;
+  margin-bottom: 34px;
+  position: relative;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.65), 0 0 32px rgba(245, 158, 11, 0.22);
+  transition: var(--transition);
+}
+
+.streamline-master-card:hover {
+  border-color: var(--rocky-amber);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.75), 0 0 42px rgba(245, 158, 11, 0.32);
+}
+
+.streamline-badge-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.streamline-card-content {
+  display: grid;
+  grid-template-columns: 1.45fr 0.85fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.streamline-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+.streamline-desc {
+  font-size: 13.5px;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.streamline-specs-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.spec-chip {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 11.5px;
+  color: var(--text-light);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.streamline-pricing-side {
+  background: rgba(10, 17, 32, 0.85);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.streamline-val-tag {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.streamline-price-box {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.streamline-price-box .pricing-currency {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--rocky-amber);
+}
+
+.streamline-price-box .pricing-amount {
+  font-size: 38px;
+  font-weight: 800;
+  font-family: var(--font-display);
+  color: #fff;
+  line-height: 1;
+}
+
+.streamline-save-badge {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  padding: 3px 12px;
+  border-radius: 9999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.streamline-deposit-note {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.streamline-select-btn {
+  width: 100%;
+  padding: 12px 18px;
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.config-radio-label.featured-streamline {
+  border-color: rgba(245, 158, 11, 0.5) !important;
+  background: linear-gradient(180deg, rgba(245, 158, 11, 0.08) 0%, rgba(15, 25, 45, 0.95) 100%) !important;
+}
+
+.config-radio-label.featured-streamline:hover {
+  border-color: var(--rocky-amber) !important;
+}
+
+@media (max-width: 900px) {
+  .streamline-card-content {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
+
 /* PRINT STYLESHEET (CLEAN FORMAL PROPOSAL PDF) */
 @media print {
   body {

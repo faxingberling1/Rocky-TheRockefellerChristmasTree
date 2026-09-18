@@ -41,6 +41,8 @@ node server.js
 ## 🌟 Overview & Key Features
 
 - **Dedicated Landscape & Portrait Formats:**
+  - **⭐ Streamline Master Package (Full Movie + 10 Viral Highlights Clip Package):**
+    - Combined Package: Full-Length 40-Minute Animated Cinema Movie (16:9 4K UHD) + 10 Viral Highlight Clips (9:16 Mobile 4K / FHD) ($25,950 total, saving $1,800)
   - **Landscape YouTube (16:9 Cinema 4K UHD: 3840×2160 @ 24fps):**
     - Full-Length Movie ($24,500)
     - 4-Part Miniseries Split ($21,800)

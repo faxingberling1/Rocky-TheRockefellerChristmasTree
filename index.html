@@ -832,9 +832,10 @@
             </div>
             <div class="format-toggle-group" id="ytFormatGroup">
               <button class="format-toggle-btn active" data-format="all" onclick="filterYouTubeFormat('all', this)">⚡ All Formats</button>
+              <button class="format-toggle-btn" data-format="streamline" style="background: rgba(245, 158, 11, 0.15); color: #fde68a; border: 1px solid rgba(245, 158, 11, 0.4);" onclick="filterYouTubeFormat('streamline', this)">⭐ Streamline Master</button>
               <button class="format-toggle-btn" data-format="landscape" onclick="filterYouTubeFormat('landscape', this)">🖥️ Landscape (16:9 Cinema 4K)</button>
               <button class="format-toggle-btn" data-format="portrait" onclick="filterYouTubeFormat('portrait', this)">📱 Portrait (9:16 Shorts 4K)</button>
-              <button class="format-toggle-btn" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4);" onclick="openPackageModal()">✨ Open Selection Modal</button>
+              <button class="format-toggle-btn" style="background: rgba(0, 136, 255, 0.15); color: #38bdf8; border: 1px solid rgba(0, 136, 255, 0.35);" onclick="openPackageModal()">✨ Open Selection Modal</button>
             </div>
           </div>
 
@@ -856,6 +857,52 @@
 
           <!-- YouTube Packages Stage -->
           <div class="youtube-packages-stage">
+            <!-- FLAGSHIP: STREAMLINE MASTER PACKAGE (FULL MOVIE + 10 VIRAL HIGHLIGHTS) -->
+            <div class="streamline-master-card" id="pkg-card-streamline-master">
+              <div class="streamline-badge-bar">
+                <span class="badge badge-gold" style="font-weight: 800; font-size: 11px; letter-spacing: 0.06em;">⭐ ALL-IN-ONE FLAGSHIP MASTER SUITE</span>
+                <span class="badge badge-spruce">FULL 40-MIN MOVIE + 10 VIRAL HIGHLIGHTS</span>
+                <span class="badge badge-blue">16:9 CINEMA 4K UHD + 9:16 MOBILE 4K SHORTS</span>
+              </div>
+
+              <div class="streamline-card-content">
+                <div class="streamline-card-info">
+                  <h3 class="streamline-title">Streamline Master: Full 40-Min Movie + 10 Viral Highlights</h3>
+                  <p class="streamline-desc">
+                    The ultimate comprehensive production package engineered specifically for <em>Rocky-The Rockefeller Christmas Tree</em>. Combines the prestigious <strong>complete 40-minute animated film</strong> in broadcast 16:9 Cinema 4K UHD for long-form viewing and festival acclaim, plus <strong>10 dedicated standalone vertical viral highlight clips (9:16)</strong> engineered with high-retention 3-second hooks for YouTube Shorts, Reels, and TikTok algorithmic discovery.
+                  </p>
+
+                  <div class="streamline-specs-chips">
+                    <span class="spec-chip">🎬 40-Min Full Animated Feature (16:9 Cinema 4K UHD)</span>
+                    <span class="spec-chip">✨ 10 Dedicated Standalone Viral Highlights (9:16 Shorts)</span>
+                    <span class="spec-chip">🎙️ Full Dedicated 6-Actor Voice Cast Ensemble</span>
+                    <span class="spec-chip">🎨 70+ Custom Painted 4K Forest & NYC Backgrounds</span>
+                    <span class="spec-chip">🎵 Symphonic Holiday Orchestration & Dolby 5.1</span>
+                    <span class="spec-chip">📦 5 Custom High-CTR Painted Thumbnails for A/B Testing</span>
+                    <span class="spec-chip">🛒 Direct Pinned Funnel to Author's Amazon Book</span>
+                    <span class="spec-chip">⏱️ Turnaround: 18 Weeks (Rolling Highlights Delivery)</span>
+                  </div>
+                </div>
+
+                <div class="streamline-pricing-side">
+                  <div class="streamline-val-tag">Combined Standalone Value: <span style="text-decoration: line-through; color: var(--text-muted);">$27,750</span></div>
+                  <div class="streamline-price-box">
+                    <span class="pricing-currency">$</span>
+                    <span class="pricing-amount">25,950</span>
+                  </div>
+                  <div class="streamline-save-badge">Includes $1,800 Streamline Savings</div>
+                  <div class="streamline-deposit-note">
+                    <strong>50% Kickoff Deposit:</strong> $12,975<br>
+                    <span>Followed by two 25% review gates of $6,487.50</span>
+                  </div>
+
+                  <button class="btn btn-gold streamline-select-btn" onclick="selectPackageByData('streamline_master')">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Select Streamline Master Package
+                  </button>
+                </div>
+              </div>
+            </div>
             <!-- Format Section A: LANDSCAPE YOUTUBE (16:9) -->
             <div class="pkg-format-group" id="formatGroupLandscape">
               <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 18px;">
@@ -1165,15 +1212,15 @@
       </div>
     </section>
 
-    <!-- SECTION DIVIDER -->
-    <div class="section-divider">
+    <!-- SECTION DIVIDER (HIDDEN AS REQUESTED) -->
+    <div class="section-divider" style="display: none;">
       <span class="divider-line"></span>
       <span class="divider-badge"><span class="sparkle">✦</span> Optional Social Expansion <span class="sparkle">✦</span></span>
       <span class="divider-line"></span>
     </div>
 
-    <!-- SECTION 7: CROSS-PLATFORM SOCIAL MEDIA SYNDICATION (OPTIONAL MODULE) -->
-    <section class="section" id="social-media">
+    <!-- SECTION 7: CROSS-PLATFORM SOCIAL MEDIA SYNDICATION (HIDDEN AS REQUESTED) -->
+    <section class="section" id="social-media" style="display: none;">
       <div class="container">
         <div class="section-header">
           <span class="section-subtitle">Optional Multi-Platform Syndication</span>
@@ -1292,9 +1339,15 @@
           <div class="section-header" style="margin-bottom: 24px; text-align: left; max-width: 100%;">
             <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 8px;">
               <span class="section-subtitle">Ongoing Multi-Platform Momentum</span>
-              <span class="badge badge-spruce">Social Media Exclusive • YouTube Managed Separately</span>
+              <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                <span class="badge badge-gold" style="font-weight: 700;">Optional</span>
+                <span class="badge badge-spruce">Social Media Exclusive • YouTube Managed Separately</span>
+              </div>
             </div>
-            <h3 style="font-size: 24px; color: #fff;">Monthly Social Media Content Retainers</h3>
+            <h3 style="font-size: 24px; color: #fff;">
+              Monthly Social Media Content Retainers
+              <span class="badge badge-gold" style="font-size: 11px; vertical-align: middle; margin-left: 8px; text-transform: uppercase;">Optional Add-On</span>
+            </h3>
             <p style="font-size: 13px; color: var(--text-light); line-height: 1.6; max-width: 900px;">
               Designed specifically for author & screenwriter <strong>Jennie E. Nicassio</strong> to keep the <em>Rocky-The Rockefeller Christmas Tree</em> brand virally active across TikTok, Instagram Reels, Facebook Reels, and Pinterest. <em>(Note: YouTube is strictly excluded here to avoid overlap with our dedicated YouTube Channel Management Engine below).</em>
             </p>
@@ -1605,6 +1658,21 @@
             </div>
             
             <div class="config-options-group">
+              <!-- Flagship Streamline Master: Full Movie + 10 Viral Highlights -->
+              <label class="config-radio-label featured-streamline selected" id="opt_streamline_master">
+                <div class="config-radio-left">
+                  <input type="radio" name="base_pkg" value="25950" data-name="Streamline Master: Full Movie + 10 Viral Highlights (16:9 + 9:16)" checked>
+                  <div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <div class="config-name">Streamline Master: Full Movie + 10 Viral Highlights</div>
+                      <span class="badge badge-gold" style="font-size: 10px; padding: 2px 7px;">Flagship Suite</span>
+                    </div>
+                    <div class="config-sub">Complete 40-Min Feature Film (16:9 Cinema 4K UHD) + 10 Standalone Viral Highlights (9:16 Shorts) • 18 Weeks</div>
+                  </div>
+                </div>
+                <div class="config-price" style="color: var(--rocky-amber);">$25,950</div>
+              </label>
+
               <!-- Landscape: Full Movie -->
               <label class="config-radio-label" id="opt_landscape_full">
                 <div class="config-radio-left">
@@ -2199,22 +2267,28 @@
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
         2. Select Video Delivery Type:
       </div>
-      <div class="video-type-selection-grid">
-        <div class="video-type-card active" id="modalCardTypeFull" onclick="setModalType('full')">
-          <div class="video-type-name">🎥 Full-Length Movie</div>
-          <div class="video-type-sub" id="modalTypeSubFull">Continuous 40-minute complete feature presentation</div>
+      <div class="video-type-selection-grid" style="grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));">
+        <div class="video-type-card active" id="modalCardTypeStreamline" onclick="setModalType('streamline')">
+          <div class="video-type-name">⭐ Streamline Master</div>
+          <div class="video-type-sub" id="modalTypeSubStreamline">Full 40-Min Movie + 10 Highlights</div>
+          <div class="video-type-price" id="modalTypePriceStreamline">$25,950</div>
+        </div>
+
+        <div class="video-type-card" id="modalCardTypeFull" onclick="setModalType('full')">
+          <div class="video-type-name">🎥 Full Movie</div>
+          <div class="video-type-sub" id="modalTypeSubFull">Continuous 40-minute complete film</div>
           <div class="video-type-price" id="modalTypePriceFull">$24,500</div>
         </div>
 
         <div class="video-type-card" id="modalCardTypeParts" onclick="setModalType('parts')">
-          <div class="video-type-name">🎬 Split into Multiple Parts</div>
+          <div class="video-type-name">🎬 Split Parts</div>
           <div class="video-type-sub" id="modalTypeSubParts">4-part episodic miniseries (~10m each)</div>
           <div class="video-type-price" id="modalTypePriceParts">$21,800</div>
         </div>
 
         <div class="video-type-card" id="modalCardTypeHighlights" onclick="setModalType('highlights')">
-          <div class="video-type-name">✨ Separate Highlight Clips</div>
-          <div class="video-type-sub" id="modalTypeSubHighlights">3–5m cinematic pilot + 3 promo teaser cuts</div>
+          <div class="video-type-name">✨ Highlight Clips</div>
+          <div class="video-type-sub" id="modalTypeSubHighlights">3–5m pilot + 3 promo teaser cuts</div>
           <div class="video-type-price" id="modalTypePriceHighlights">$4,950</div>
         </div>
       </div>
