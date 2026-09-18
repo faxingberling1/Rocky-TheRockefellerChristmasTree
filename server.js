@@ -32,7 +32,7 @@ app.get('/api/sow-data', (req, res) => {
     project: {
       title: "Rocky - The Rockefeller Christmas Tree: The Little Tree with Big Dreams",
       author: "Jennie E. Nicassio",
-      productionCompany: "Nieje Productions",
+      productionCompany: "ROCKY: THE ROCKEFELLER CHRISTMAS TREE",
       agency: "Neo Gen Technologies",
       accountManager: {
         name: "Ayaz",
@@ -149,7 +149,7 @@ app.post('/api/sign-off', (req, res) => {
       id: 'SOW-SIGN-' + Date.now().toString(36).toUpperCase(),
       signerName,
       signerEmail,
-      organization: organization || 'Nieje Productions',
+      organization: organization || 'ROCKY: THE ROCKEFELLER CHRISTMAS TREE',
       signatureImage: signatureImage || null,
       notes: notes || '',
       selectedConfig: selectedConfig || {},

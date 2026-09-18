@@ -1,7 +1,7 @@
-# Rocky – The Rockefeller Christmas Tree: The Little Tree with Big Dreams
+# Rocky-The Rockefeller Christmas Tree
 ### Interactive Scope of Work (SOW) & 2D Animation Production Proposal
 
-A comprehensive, interactive Scope of Work (SOW) and commercial production platform engineered by **Neo Gen Technologies** for client **Jennie E. Nicassio** (Nieje Productions) for the screen adaptation of *"Rocky – The Rockefeller Christmas Tree: The Little Tree with Big Dreams"*.
+A comprehensive, interactive Scope of Work (SOW) and commercial production platform engineered by **Neo Gen Technologies** for client **Jennie E. Nicassio** (ROCKY: THE ROCKEFELLER CHRISTMAS TREE) for the screen adaptation of *"Rocky-The Rockefeller Christmas Tree"*.
 
 ---
 
@@ -40,13 +40,21 @@ node server.js
 
 ## 🌟 Overview & Key Features
 
-- **Dual-Track Production Strategy:**
-  - **Track A (Prestige Broadcast & Festival):** 16:9 Cinema 4K UHD @ 24fps proof-of-concept pilot ($4,950) and full 40-minute screenplay feature special ($24,500).
-  - **Track B (Viral Short-Drama Series - Recommended):** 30 serialized 9:16 vertical episodes (60–90s each) tailored for YouTube Shorts, TikTok, and Instagram Reels ($8,850 total, $295/ep).
+- **Dedicated Landscape & Portrait Formats:**
+  - **Landscape YouTube (16:9 Cinema 4K UHD: 3840×2160 @ 24fps):**
+    - Full-Length Movie ($24,500)
+    - 4-Part Miniseries Split ($21,800)
+    - Proof-of-Concept Pilot & Teaser Cuts ($4,950)
+  - **Portrait YouTube (9:16 Mobile 4K / FHD: 2160×3840 / 1080×1920 @ 60fps):**
+    - Full-Length Movie Vertical Special ($19,500)
+    - 30-Episode Serialized Mini-Clips ($8,850 total, $295/ep)
+    - Dedicated 10 Individual Highlight Clips ($3,250 total, $325/clip)
+- **Interactive Package Selection Modal:** Client can toggle aspect ratio (Landscape / Portrait), delivery type (Full-Length, Multiple Parts, Highlight Clips), and apply to the SOW builder in real-time.
+- **Milestone Cashflow:** Structured 50% initial kickoff deposit, 25% animatic lock, 25% final delivery.
 - **Narrative Beat Architecture:** 33-beat screen adaptation breakdown cross-referenced with the registered screenplay and published children's book.
-- **Voice-Over (VO) Breakdown & Casting Matrix:** Character dialogue metrics, studio recording allocations, indie multi-voice ensemble packages ($850), and hourly add-on buffers ($65/hr).
-- **YouTube Channel Management Engine:** Strategic rollout calendar, A/B thumbnail testing, Christmas SEO discoverability, and pinned funnel to Amazon book sales.
-- **Interactive Budget & Scope Configurator:** Real-time scope customization with live budget calculations, itemized quote generation, and 25% milestone payment breakdowns.
+- **Monthly Retainer Plan (Social Media Exclusive):** Strategic short-form social engagement (TikTok, IG Reels, Facebook) with Amazon book funnel.
+- **YouTube Channel Management Deep Dive:** Complete 8-point operational management suite and growth optimization.
+- **Production Schedule & 24/7 Support:** Mon–Fri 9am–6pm EST production schedule (Saturday & Sunday non-production) paired with dedicated 24/7 client support SLA.
 - **Client Digital Sign-Off Portal:** Direct digital signature pad and formal authorization submission system with offline local storage persistence.
 - **Executive Print / PDF Formatting:** Custom print styling that converts the dark luxury interface into an executive white-paper layout ready for physical signing or archival.
 
@@ -54,9 +62,9 @@ node server.js
 
 ## 👤 Project Stakeholders
 
-- **Client / Author:** Jennie E. Nicassio (Nieje Productions) — `Jennie3963@gmail.com`
+- **Client / Author:** Jennie E. Nicassio (ROCKY: THE ROCKEFELLER CHRISTMAS TREE), `Jennie3963@gmail.com`
 - **Agency:** Neo Gen Technologies
-- **Senior Account Manager:** Ayaz — `ayaz@neogentechnologies.com`
+- **Senior Account Manager:** Ayaz, `ayaz@neogentechnologies.com`
 
 ---
 

@@ -188,19 +188,19 @@ const BEATS_DATA = [
   { act: 'act2', num: 16, title: 'Bruce Wins the Ribbon', func: 'False Defeat', desc: 'Bruce is crowned with the red champion ribbon while Rocky sits broken and gray in the hollow.', visual: 'Bruce ribboned as helicopters circle; Rocky battered in silence.' },
   { act: 'act2', num: 17, title: 'Rocky Stops Believing', func: 'Dark Night of Soul', desc: 'Rocky wilts. Mrs. Pickles quietly places her vanity mirror face-down in the snow beside him.', visual: 'Rocky and Mrs. Pickles at dusk; silver mirror face-down in snow.' },
   { act: 'act2', num: 18, title: 'AJ Sings a New Song', func: 'Recovery', desc: 'AJ returns, rewriting his cruel song into praise. A single green needle shoots upward.', visual: 'AJ singing earnestly; forest saplings gathering; one bright needle.' },
-  { act: 'act2', num: 19, title: 'Rocky Returns as Himself', func: 'Internal Victory', desc: 'Rocky regains strength—not as a perfect tree, but as his strong, authentic, crooked self.', visual: 'Rocky proud, crooked, mentoring young sapling Pip.' },
+  { act: 'act2', num: 19, title: 'Rocky Returns as Himself', func: 'Internal Victory', desc: 'Rocky regains strength, not as a perfect tree, but as his strong, authentic, crooked self.', visual: 'Rocky proud, crooked, mentoring young sapling Pip.' },
   { act: 'act2', num: 20, title: 'The Catastrophic Ice Storm', func: 'Climactic Threat', desc: 'Freezing rain glazes the forest into brittle glass. Violent winds crack Bruce\'s massive trunk.', visual: 'Savage blizzard; Rocky bracing five saplings; Bruce splitting.' },
   { act: 'act2', num: 21, title: 'Rocky Braces Bruce', func: 'Courage & Forgiveness', desc: 'Rocky crosses the frozen ridge, wedging his small sturdy trunk to keep Bruce from collapsing.', visual: 'Small Rocky locked beneath huge cracked Bruce in howling wind.' },
   { act: 'act2', num: 22, title: 'The Champion\'s Ornaments', func: 'Symbolic Shield', desc: 'Rocky reaches into Mary Louise\'s ruined home, sheltering her handmade dewdrop ornaments.', visual: 'Rocky\'s iced branch gently cradling fragile crystalline star.' },
   { act: 'act2', num: 23, title: 'The Perfect Tree Discovered', func: 'Climax of Act 2', desc: 'At dawn, ice-crowned Rocky refracts sunrise into millions of prisms. The returning chopper lands: "We found the tree!"', visual: 'Rocky glazed in ice, blazing with rainbow light; judges landing.' },
   { act: 'act2', num: 24, title: 'Bruce\'s Public Confession', func: 'Reconciliation', desc: 'Bruce reveals the trap to the forest, declaring Rocky sacrificed his first chance to save Mary Louise.', visual: 'Cracked, ribboned Bruce bowing deeply before ice-crowned Rocky.' },
   // ACT THREE
-  { act: 'act3', num: 25, title: 'The Saw', func: 'Threshold', desc: 'A crane and wrapped saw arrive. Rocky learns what going to New York costs—and says yes.', visual: 'Rocky facing the wrapped ceremonial saw; forest gathered in quiet.' },
+  { act: 'act3', num: 25, title: 'The Saw', func: 'Threshold', desc: 'A crane and wrapped saw arrive. Rocky learns what going to New York costs, and says yes.', visual: 'Rocky facing the wrapped ceremonial saw; forest gathered in quiet.' },
   { act: 'act3', num: 26, title: 'Goodbye to the Forest', func: 'Departure', desc: 'Pip clings to Rocky\'s boughs. Mary Louise hangs her star. As the crane lifts, the forest bows.', visual: 'Entire forest bowing in respect as Rocky rises into the sky.' },
   { act: 'act3', num: 27, title: 'The Flatbed to New York', func: 'Road Sequence', desc: 'Rocky travels highways on an oversized rig. AJ and Mrs. Pickles stow away under tarps.', visual: 'Highway under night stars; Rocky netted on flatbed; cities cheering.' },
   { act: 'act3', num: 28, title: 'The World Stands Up', func: 'Arrival', desc: 'Rocky enters Manhattan. Giant cranes hoist him across 5th Avenue and into Rockefeller Plaza.', visual: 'Rocky flying between towering skyscrapers, yellow cabs below.' },
   { act: 'act3', num: 29, title: 'Crushed in the Plaza', func: 'Final Crisis', desc: 'The net is removed. Long travel has flattened Rocky\'s needles. Crew doubts if he was the right choice.', visual: 'Small battered Rocky alone in empty Plaza at midnight.' },
-  { act: 'act3', num: 30, title: 'Believing for Others', func: 'Final Choice', desc: 'Looking at empty plaza chairs, Rocky repeats his words—not for himself, but for the people.', visual: 'Rocky opening branch by branch in fresh falling midnight snow.' },
+  { act: 'act3', num: 30, title: 'Believing for Others', func: 'Final Choice', desc: 'Looking at empty plaza chairs, Rocky repeats his words, not for himself, but for the people.', visual: 'Rocky opening branch by branch in fresh falling midnight snow.' },
   { act: 'act3', num: 31, title: 'The Great Illumination', func: 'Public Climax', desc: 'The switch is flipped. Rocky erupts into 50,000 multi-colored lights before cheering thousands.', visual: 'Breathtaking Rockefeller Center lighting; golden glow; crowd cheers.' },
   { act: 'act3', num: 32, title: 'One More Gift', func: 'Epilogue Bridge', desc: 'When the season ends, Rocky\'s wood builds a warm home for a family in need.', visual: 'Warm spring house built from Rocky\'s timber; Pip smiling in forest.' },
   { act: 'act3', num: 33, title: 'The Top of the World', func: 'Final Legacy', desc: 'In the storybook North Pole, Rocky takes his eternal place among generations of chosen trees.', visual: 'Northern lights dancing over rows of radiant trees; Rocky at center.' }
@@ -341,15 +341,19 @@ function initConfigurator() {
     const selectedVO = document.querySelector('input[name="vo_tier"]:checked');
     const checkedAddons = document.querySelectorAll('input[name="addon_opt"]:checked');
 
-    let baseVal = selectedBase ? parseInt(selectedBase.value, 10) : 4950;
+    let baseVal = selectedBase ? parseInt(selectedBase.value, 10) : 8850;
     let voVal = selectedVO ? parseInt(selectedVO.value, 10) : 850;
     
     currentConfig.basePrice = baseVal;
     currentConfig.baseName = selectedBase ? selectedBase.getAttribute('data-name') : "2D Animation";
     
-    if (baseVal === 4950) currentConfig.baseTimeline = "5–6 Weeks";
+    if (baseVal === 24500) currentConfig.baseTimeline = "16–18 Weeks";
+    else if (baseVal === 21800) currentConfig.baseTimeline = "12–14 Weeks (Rolling Deliveries)";
+    else if (baseVal === 4950) currentConfig.baseTimeline = "5–6 Weeks";
+    else if (baseVal === 19500) currentConfig.baseTimeline = "14–16 Weeks";
     else if (baseVal === 8850) currentConfig.baseTimeline = "8–10 Weeks (Rolling Deliveries)";
-    else currentConfig.baseTimeline = "16–18 Weeks";
+    else if (baseVal === 3250) currentConfig.baseTimeline = "4 Weeks";
+    else currentConfig.baseTimeline = "6–8 Weeks";
 
     currentConfig.voPrice = voVal;
     currentConfig.voName = selectedVO ? selectedVO.getAttribute('data-name') : "VO Tier";
@@ -360,20 +364,37 @@ function initConfigurator() {
       const val = parseInt(a.value, 10);
       addonsTotal += val;
       currentConfig.addons.push({
+        id: a.id,
         name: a.getAttribute('data-name'),
         price: val
       });
     });
 
+    // Social Media Syndication Modules (if active)
+    if (typeof activeSocialModules !== 'undefined') {
+      if (activeSocialModules.tiktok) {
+        addonsTotal += 850;
+        currentConfig.addons.push({ id: 'social_tiktok', name: 'TikTok Algorithm & Sound Engine', price: 850 });
+      }
+      if (activeSocialModules.instagram) {
+        addonsTotal += 750;
+        currentConfig.addons.push({ id: 'social_instagram', name: 'Instagram Reels & Stories Engine', price: 750 });
+      }
+      if (activeSocialModules.omni) {
+        addonsTotal += 1250;
+        currentConfig.addons.push({ id: 'social_omni', name: 'Omni-Channel Social Bundle (TikTok + Reels)', price: 1250 });
+      }
+    }
+
     const subtotal = baseVal + voVal + addonsTotal;
-    // Bundle incentive discount if vertical series ($8,850) + YouTube 6-Mo campaign ($2,340)
+    // Bundle incentive discount if series + YouTube 6-Mo campaign ($2,340)
     let discount = 0;
     if (baseVal === 8850 && addonsTotal >= 2340) {
       discount = 400; // $400 indie author holiday bonus incentive
     }
 
     const total = subtotal - discount;
-    const deposit = Math.round(total * 0.25);
+    const deposit = Math.round(total * 0.50); // 50% Initial Kickoff Deposit as requested
 
     currentConfig.subtotal = subtotal;
     currentConfig.discount = discount;
@@ -424,6 +445,7 @@ function initConfigurator() {
     if (signoffDeposit) signoffDeposit.innerText = `$${currentConfig.deposit.toLocaleString()}`;
   }
 
+  window.triggerConfigUpdate = updatePricing;
   updatePricing();
 }
 
@@ -608,7 +630,7 @@ function openSignOffSuccessModal(result, signerName, signerEmail) {
         <p><strong>Approved Deliverable:</strong> ${currentConfig.baseName}</p>
         <p><strong>Voice Over Cast:</strong> ${currentConfig.voName}</p>
         <p><strong>Total Approved Budget:</strong> <span style="color: var(--rocky-amber); font-weight: 700;">$${currentConfig.total.toLocaleString()}</span></p>
-        <p><strong>Kickoff Deposit (25%):</strong> <span style="color: var(--ice-blue); font-weight: 700;">$${currentConfig.deposit.toLocaleString()}</span></p>
+        <p><strong>Initial Kickoff Deposit (50%):</strong> <span style="color: var(--ice-blue); font-weight: 700;">$${currentConfig.deposit.toLocaleString()}</span></p>
         <p><strong>Estimated Production Window:</strong> ${currentConfig.baseTimeline}</p>
         <p style="margin-top: 14px; font-size: 11px; color: var(--text-muted);">
           A countersigned execution package and onboarding calendar invite will be delivered to your email within 24 hours.
@@ -694,8 +716,8 @@ function openQuoteSummaryModal(quoteId) {
     modalContent.innerHTML = `
       <div style="margin-bottom: 16px;">
         <div style="font-size: 12px; color: var(--text-muted);">PREPARED FOR:</div>
-        <div style="font-size: 16px; font-weight: 700; color: #fff;">Jennie E. Nicassio (Nieje Productions)</div>
-        <div style="font-size: 12px; color: var(--ice-blue);">Screenplay & Animated Series: Rocky – The Rockefeller Christmas Tree</div>
+        <div style="font-size: 16px; font-weight: 700; color: #fff;">Jennie E. Nicassio (ROCKY: THE ROCKEFELLER CHRISTMAS TREE)</div>
+        <div style="font-size: 12px; color: var(--ice-blue);">Screenplay & Animated Series: Rocky-The Rockefeller Christmas Tree</div>
       </div>
 
       <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 16px; margin-bottom: 20px;">
@@ -728,8 +750,8 @@ function openQuoteSummaryModal(quoteId) {
 
         <div style="background: rgba(16, 185, 129, 0.06); padding: 12px; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.3);">
           <div style="color: #34d399; font-weight: 700;">Milestone Escrow:</div>
-          <div style="color: #fff; font-weight: 600;">25% Initial Kickoff Deposit: $${currentConfig.deposit.toLocaleString()}</div>
-          <div style="color: var(--text-muted);">Remaining balance billed across 3 review gates</div>
+          <div style="color: #fff; font-weight: 600;">50% Initial Kickoff Deposit: $${currentConfig.deposit.toLocaleString()}</div>
+          <div style="color: var(--text-muted);">Remaining balance: Gate 2 (25%) upon Animatic Lock + Gate 3 (25%) upon Final Master</div>
         </div>
       </div>
     `;
@@ -753,3 +775,381 @@ function showToast(message) {
     toast.classList.remove('show');
   }, 4000);
 }
+
+// ==========================================
+// 9. YOUTUBE FRAME FORMAT FILTER & SOCIAL TOGGLE
+// ==========================================
+function filterYouTubeFormat(format, btn) {
+  const buttons = document.querySelectorAll('#ytFormatGroup .format-toggle-btn');
+  buttons.forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+
+  const groupLandscape = document.getElementById('formatGroupLandscape');
+  const groupPortrait = document.getElementById('formatGroupPortrait');
+
+  if (format === 'landscape') {
+    if (groupLandscape) {
+      groupLandscape.style.display = 'block';
+      groupLandscape.style.opacity = '1';
+    }
+    if (groupPortrait) {
+      groupPortrait.style.display = 'none';
+    }
+    showToast('Displaying: Landscape YouTube Packages (16:9 Cinema 4K UHD)');
+  } else if (format === 'portrait') {
+    if (groupLandscape) {
+      groupLandscape.style.display = 'none';
+    }
+    if (groupPortrait) {
+      groupPortrait.style.display = 'block';
+      groupPortrait.style.opacity = '1';
+    }
+    showToast('Displaying: Portrait YouTube Packages (9:16 Mobile 4K / FHD)');
+  } else {
+    if (groupLandscape) {
+      groupLandscape.style.display = 'block';
+      groupLandscape.style.opacity = '1';
+    }
+    if (groupPortrait) {
+      groupPortrait.style.display = 'block';
+      groupPortrait.style.opacity = '1';
+    }
+    showToast('Displaying: All YouTube Production Packages');
+  }
+}
+
+let activeSocialModules = {
+  tiktok: false,
+  instagram: false,
+  omni: false
+};
+
+function toggleSocialOption(type, price, btn) {
+  const cardMap = {
+    tiktok: document.getElementById('socialCardTikTok'),
+    instagram: document.getElementById('socialCardInstagram'),
+    omni: document.getElementById('socialCardOmni')
+  };
+
+  const nameMap = {
+    tiktok: 'TikTok Algorithm & Sound Engine',
+    instagram: 'Instagram Reels & Stories Engine',
+    omni: 'Omni-Channel Social Bundle (TikTok + Reels)'
+  };
+
+  const card = cardMap[type];
+  activeSocialModules[type] = !activeSocialModules[type];
+  const isActive = activeSocialModules[type];
+
+  if (isActive) {
+    if (card) card.classList.add('active-social');
+    if (btn) {
+      btn.innerText = '✓ Added to Scope';
+      btn.classList.add('btn-gold');
+      btn.classList.remove('btn-outline');
+    }
+    showToast(`✓ ${nameMap[type]} ($${price.toLocaleString()}) added to Scope!`);
+  } else {
+    if (card) card.classList.remove('active-social');
+    if (btn) {
+      btn.innerText = `+ Add ${type === 'omni' ? 'Omni Bundle ($1,250)' : type.charAt(0).toUpperCase() + type.slice(1) + ' Module ($' + price + ')'}`;
+      btn.classList.remove('btn-gold');
+      btn.classList.add('btn-outline');
+    }
+    showToast(`${nameMap[type]} removed from Scope.`);
+  }
+
+  if (typeof window.triggerConfigUpdate === 'function') {
+    window.triggerConfigUpdate();
+  }
+}
+
+// ==========================================
+// 10. PACKAGE SELECTION & CUSTOMIZATION MODAL
+// ==========================================
+const PACKAGES_DATA = {
+  landscape: {
+    formatName: 'Landscape YouTube (16:9 Cinema 4K UHD)',
+    aspectRatio: '16:9 Cinema 4K UHD',
+    full: {
+      key: 'landscape_full',
+      title: 'Full 40-Minute Animated Family Feature Special',
+      shortName: 'Full 40-Min Animated Feature (Landscape 16:9 Cinema 4K)',
+      price: 24500,
+      format: 'landscape',
+      type: 'full',
+      resolution: 'Resolution: 3840×2160 UHD @ 24fps • Dolby 5.1 & Stereo',
+      depositNote: '50% Kickoff Deposit: $12,250 • two 25% review gates',
+      deliverables: [
+        'Single continuous 40-minute animated feature special in 4K UHD (3840×2160)',
+        'Custom YouTube Chapter Markers & rich timestamps index for organic search',
+        'Over 70 custom painted 4K forest & Rockefeller Center matte environments',
+        'Full dedicated 6-actor professional voice cast recording & character model sheets',
+        'Full symphonic holiday score orchestration & Dolby 5.1 surround mix',
+        'Turnaround: 18 Weeks structured master delivery'
+      ]
+    },
+    parts: {
+      key: 'landscape_parts',
+      title: '4-Part Episodic Miniseries (~10 Mins Each)',
+      shortName: '4-Part Episodic Miniseries (Landscape 16:9 Cinema 4K)',
+      price: 21800,
+      format: 'landscape',
+      type: 'parts',
+      resolution: 'Resolution: 3840×2160 UHD @ 24fps • 4 Polish Parts',
+      depositNote: '50% Kickoff Deposit: $10,900 • two 25% review gates',
+      deliverables: [
+        '4 episodic installments (~10 minutes each, total 40 minutes) in 4K UHD',
+        'Custom episodic opening & closing title cards with mid-story cliffhangers',
+        'YouTube Playlist sequencing engineered for algorithmic binge-watching',
+        '4 individual custom painted high-CTR thumbnails for A/B testing',
+        'Full voice cast, sound design & original holiday orchestration',
+        'Turnaround: 14 Weeks (Rolling bi-weekly episodic deliveries)'
+      ]
+    },
+    highlights: {
+      key: 'landscape_highlights',
+      title: 'Proof-of-Concept Pilot & Cinematic Teaser Clips',
+      shortName: 'Proof-of-Concept Pilot & Teasers (Landscape 16:9)',
+      price: 4950,
+      format: 'landscape',
+      type: 'highlights',
+      resolution: 'Resolution: 3840×2160 UHD @ 24fps • 3–5m Pilot + 3 Teasers',
+      depositNote: '50% Kickoff Deposit: $2,475 • two 25% review gates',
+      deliverables: [
+        '3–5 Minute 2D Cinematic Short covering Beats 1–8 (Hidden Forest & Mary Louise)',
+        '3 standalone 30s viral teaser highlight clips for YouTube preview campaigns',
+        'YouTube Premiere setup with live chat countdown moderation',
+        '3 Custom high-CTR thumbnails for YouTube A/B split testing',
+        'Multi-voice professional ensemble acting included',
+        'Turnaround: 6 Weeks from kickoff'
+      ]
+    }
+  },
+  portrait: {
+    formatName: 'Portrait YouTube (9:16 Shorts & Mobile Fullscreen)',
+    aspectRatio: '9:16 Mobile 4K / FHD',
+    full: {
+      key: 'portrait_full',
+      title: 'Full 40-Minute Mobile Vertical Feature Cut',
+      shortName: 'Full 40-Min Mobile Movie Cut (Portrait 9:16 Vertical 4K)',
+      price: 19500,
+      format: 'portrait',
+      type: 'full',
+      resolution: 'Resolution: 2160×3840 Vertical 4K / 1080×1920 @ 60fps',
+      depositNote: '50% Kickoff Deposit: $9,750 • two 25% review gates',
+      deliverables: [
+        'Continuous 40-minute movie reframed in Vertical 4K (2160×3840)',
+        'Dynamic pan-and-scan camera motion keeping characters center-stage',
+        'Kinetic burned-in subtitles optimized for mobile sound-off viewers',
+        'Full multi-voice cast, cinematic sound effects & holiday music score',
+        'Mobile YouTube premiere setup & chapter markers',
+        'Turnaround: 16 Weeks structured delivery'
+      ]
+    },
+    parts: {
+      key: 'portrait_parts',
+      title: '30-Episode Serialized Micro-Drama Series',
+      shortName: '30-Episode Serialized Series (Portrait 9:16 Shorts)',
+      price: 8850,
+      format: 'portrait',
+      type: 'parts',
+      resolution: 'Resolution: 1080×1920 FHD @ 60fps • 30 Episodes',
+      depositNote: '50% Kickoff Deposit: $4,425 • two 25% review gates',
+      deliverables: [
+        '30 serialized episodes (60–90 seconds each) in 1080×1920 FHD @ 60fps',
+        'High-retention 3-second hook & micro-cliffhanger per episode for Shorts feed',
+        'End-screen cards & YouTube Shorts playlist sequencing for binge-watching',
+        'Direct pinned comment & description funnels to buy the Amazon book',
+        'Burned-in dynamic typography & comedy sound effects',
+        'Turnaround: 8 Weeks (Rolling weekly episodic deliveries)'
+      ]
+    },
+    highlights: {
+      key: 'portrait_highlights',
+      title: '10 Individual Standalone Viral Highlight Clips',
+      shortName: '10 Individual Viral Highlight Clips (Portrait 9:16 Shorts)',
+      price: 3250,
+      format: 'portrait',
+      type: 'highlights',
+      resolution: 'Resolution: 1080×1920 FHD @ 60fps • 10 Individual Clips',
+      depositNote: '50% Kickoff Deposit: $1,625 • two 25% review gates',
+      deliverables: [
+        '10 dedicated standalone highlight clips in 1080×1920 FHD @ 60fps ($325/clip)',
+        'Captures key story moments: Rocky\'s affirmation, AJ\'s song, Bruce\'s threat, Mary Louise\'s belief speech & tree choosing',
+        'Engineered specifically for YouTube Shorts algorithmic virality',
+        'High-energy kinetic typography, audio sound bite stems & stickers',
+        'Direct pinned link funneling viewers to buy the published Amazon book',
+        'Turnaround: 4 Weeks rapid promotional launch'
+      ]
+    }
+  }
+};
+
+let currentModalFormat = 'landscape';
+let currentModalType = 'full';
+
+function openPackageModal() {
+  const modal = document.getElementById('packageModal');
+  if (modal) {
+    modal.classList.add('open');
+    renderPackageModal();
+  }
+}
+
+function closePackageModal() {
+  const modal = document.getElementById('packageModal');
+  if (modal) modal.classList.remove('open');
+}
+
+function setModalFormat(format) {
+  currentModalFormat = format;
+  document.getElementById('modalChoiceLandscape')?.classList.toggle('active', format === 'landscape');
+  document.getElementById('modalChoicePortrait')?.classList.toggle('active', format === 'portrait');
+  renderPackageModal();
+}
+
+function setModalType(type) {
+  currentModalType = type;
+  document.getElementById('modalCardTypeFull')?.classList.toggle('active', type === 'full');
+  document.getElementById('modalCardTypeParts')?.classList.toggle('active', type === 'parts');
+  document.getElementById('modalCardTypeHighlights')?.classList.toggle('active', type === 'highlights');
+  renderPackageModal();
+}
+
+function renderPackageModal() {
+  const formatData = PACKAGES_DATA[currentModalFormat];
+  if (!formatData) return;
+  const pkg = formatData[currentModalType];
+
+  const fullPkg = formatData.full;
+  const partsPkg = formatData.parts;
+  const highlightsPkg = formatData.highlights;
+
+  const priceFull = document.getElementById('modalTypePriceFull');
+  const priceParts = document.getElementById('modalTypePriceParts');
+  const priceHighlights = document.getElementById('modalTypePriceHighlights');
+
+  if (priceFull) priceFull.innerText = `$${fullPkg.price.toLocaleString()}`;
+  if (priceParts) priceParts.innerText = `$${partsPkg.price.toLocaleString()}`;
+  if (priceHighlights) priceHighlights.innerText = `$${highlightsPkg.price.toLocaleString()}`;
+
+  const subParts = document.getElementById('modalTypeSubParts');
+  const subHighlights = document.getElementById('modalTypeSubHighlights');
+  if (subParts) {
+    subParts.innerText = currentModalFormat === 'landscape' ? '4-part episodic miniseries (~10m each)' : '30 serialized micro-episodes (60–90s)';
+  }
+  if (subHighlights) {
+    subHighlights.innerText = currentModalFormat === 'landscape' ? '3–5m cinematic pilot + 3 promo teaser cuts' : '10 individual viral highlight clips (30–45s)';
+  }
+
+  const badge = document.getElementById('modalPreviewBadge');
+  const title = document.getElementById('modalPreviewTitle');
+  const res = document.getElementById('modalPreviewRes');
+  const price = document.getElementById('modalPreviewPrice');
+  const deposit = document.getElementById('modalPreviewDeposit');
+  const list = document.getElementById('modalDeliverablesList');
+
+  if (badge) badge.innerText = formatData.aspectRatio;
+  if (title) title.innerText = pkg.title;
+  if (res) res.innerText = pkg.resolution;
+  if (price) price.innerText = `$${pkg.price.toLocaleString()}`;
+  if (deposit) deposit.innerText = pkg.depositNote;
+
+  if (list) {
+    list.innerHTML = pkg.deliverables.map(d => `
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>${d}</span>
+      </li>
+    `).join('');
+  }
+}
+
+function applyPackageModalSelection() {
+  const pkg = PACKAGES_DATA[currentModalFormat][currentModalType];
+  selectPackageByData(pkg);
+  closePackageModal();
+  showToast(`✓ Selected: ${pkg.title} ($${pkg.price.toLocaleString()})`);
+  
+  const configurator = document.getElementById('configurator');
+  if (configurator) configurator.scrollIntoView({ behavior: 'smooth' });
+}
+
+function selectPackageFromCard(format, type) {
+  const pkg = PACKAGES_DATA[format][type];
+  selectPackageByData(pkg);
+  showToast(`✓ Selected: ${pkg.title} ($${pkg.price.toLocaleString()})`);
+  
+  const configurator = document.getElementById('configurator');
+  if (configurator) configurator.scrollIntoView({ behavior: 'smooth' });
+}
+
+function selectPackageByData(pkg) {
+  const targetId = `opt_${pkg.key}`;
+  const targetRadio = document.getElementById(targetId)?.querySelector('input[type="radio"]');
+  const allRadios = document.querySelectorAll('input[name="base_pkg"]');
+
+  if (targetRadio) {
+    targetRadio.checked = true;
+    allRadios.forEach(r => r.closest('.config-radio-label')?.classList.remove('selected'));
+    targetRadio.closest('.config-radio-label')?.classList.add('selected');
+  } else {
+    // Match by value
+    allRadios.forEach(r => {
+      if (parseInt(r.value, 10) === pkg.price) {
+        r.checked = true;
+        allRadios.forEach(x => x.closest('.config-radio-label')?.classList.remove('selected'));
+        r.closest('.config-radio-label')?.classList.add('selected');
+      }
+    });
+  }
+
+  if (typeof window.triggerConfigUpdate === 'function') {
+    window.triggerConfigUpdate();
+  }
+}
+
+// Make globally accessible
+window.openPackageModal = openPackageModal;
+window.closePackageModal = closePackageModal;
+window.setModalFormat = setModalFormat;
+window.setModalType = setModalType;
+window.applyPackageModalSelection = applyPackageModalSelection;
+window.selectPackageFromCard = selectPackageFromCard;
+window.filterYouTubeFormat = filterYouTubeFormat;
+window.toggleSocialOption = toggleSocialOption;
+
+// Wire up Retainer and YouTube CTA buttons on load
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.select-retainer-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const retainer = btn.getAttribute('data-retainer');
+      const price = btn.getAttribute('data-price');
+      showToast(`✓ Selected Monthly Retainer ($${price}/mo) - Added to proposal inquiry!`);
+      const configurator = document.getElementById('configurator');
+      if (configurator) configurator.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  document.querySelectorAll('.select-yt-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const yt = btn.getAttribute('data-yt');
+      const price = btn.getAttribute('data-price');
+      // Toggle corresponding checkbox in configurator if available
+      const addonCheck = document.querySelector(`input[name="addon_opt"][value="${price}"]`);
+      if (addonCheck) {
+        addonCheck.checked = true;
+        addonCheck.closest('.config-radio-label')?.classList.add('selected');
+        if (typeof window.triggerConfigUpdate === 'function') {
+          window.triggerConfigUpdate();
+        }
+      }
+      showToast(`✓ YouTube Management ($${price}) active in proposal!`);
+      const configurator = document.getElementById('configurator');
+      if (configurator) configurator.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+});
