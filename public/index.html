@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scope of Work: Rocky - The Rockefeller Christmas Tree | Neo Gen Technologies</title>
+  <meta name="description" content="Comprehensive Scope of Work for 2D Animation, Voice-Over Production, Vertical Series & YouTube Channel Management for Rocky - The Rockefeller Christmas Tree.">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Snow Overlay -->
+  <canvas id="snow-canvas"></canvas>
+
+  <!-- Reading Progress Bar -->
+  <div class="scroll-progress-bar" id="progressBar"></div>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <!-- Dual-Brand Identity: Neo Gen Technologies + Rocky -->
+      <div class="brand-combo">
+        <a href="#hero" class="brand-neogen-wrap" title="Neo Gen Technologies">
+          <img src="/assets/neogen_technologies_logo.png" alt="Neo Gen Technologies Logo" class="brand-neogen-logo" id="headerNeogenLogo">
+          <div class="brand-company-title">
+            <span class="company-name">NEO GEN</span>
+            <span class="company-sub">TECHNOLOGIES</span>
+          </div>
+        </a>
+
+        <div class="brand-divider"></div>
+
+        <a href="#story-bible" class="brand-rocky-wrap" title="Rocky - The Rockefeller Christmas Tree">
+          <img src="/assets/rocky_cover_title_clean.png" alt="Rocky The Rockefeller Christmas Tree" class="brand-rocky-img">
+          <div class="brand-ip-details">
+            <span class="brand-ip-title">ROCKY</span>
+            <span class="brand-ip-sub">The Rockefeller Christmas Tree</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Main Desktop Navigation -->
+      <nav class="nav-container" id="mainNav">
+        <ul class="nav-menu">
+          <li><a href="#summary" class="nav-link">Brief</a></li>
+          <li><a href="#story-bible" class="nav-link">Story & Cast</a></li>
+          <li><a href="#dual-track" class="nav-link">Strategy</a></li>
+          <li><a href="#animation-engine" class="nav-link">2D Pipeline</a></li>
+          <li><a href="#voice-overs" class="nav-link">Voice Overs</a></li>
+          <li><a href="#pricing-models" class="nav-link">Pricing</a></li>
+          <li><a href="#youtube-strategy" class="nav-link">YouTube</a></li>
+          <li><a href="#configurator" class="nav-link nav-link-builder">SOW Builder</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Group & Account Manager -->
+      <div class="header-actions">
+        <!-- Account Manager Direct Pill -->
+        <a href="mailto:ayaz@neogentechnologies.com" class="header-am-pill" title="Contact Account Manager: Ayaz (ayaz@neogentechnologies.com)">
+          <span class="am-live-dot"></span>
+          <span class="am-text">AM: <strong>Ayaz</strong></span>
+        </a>
+
+        <!-- Print / PDF Button -->
+        <button class="btn btn-outline btn-sm" id="printProposalBtn" title="Print or Save as PDF">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+          <span class="btn-text-pdf">Print / PDF</span>
+        </button>
+
+        <!-- CTA Configure Scope -->
+        <a href="#configurator" class="btn btn-gold btn-sm header-cta-btn">Configure</a>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer Overlay -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <img src="/assets/neogen_technologies_logo.png" alt="Neo Gen" style="height: 28px;">
+        <span>NEO GEN SOW</span>
+      </div>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation">&times;</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#summary" class="drawer-link">Executive Brief</a></li>
+      <li><a href="#story-bible" class="drawer-link">Story Engine & Character Cast</a></li>
+      <li><a href="#dual-track" class="drawer-link">Dual-Track Production Strategy</a></li>
+      <li><a href="#animation-engine" class="drawer-link">2D Animation Pipeline</a></li>
+      <li><a href="#voice-overs" class="drawer-link">Voice-Over Matrix & Add-Ons</a></li>
+      <li><a href="#pricing-models" class="drawer-link">Pricing Models & Retainers</a></li>
+      <li><a href="#youtube-strategy" class="drawer-link">YouTube Publishing Engine</a></li>
+      <li><a href="#configurator" class="drawer-link">Interactive SOW Configurator</a></li>
+      <li><a href="#revisions" class="drawer-link">Revisions & Quality Gates</a></li>
+      <li><a href="#timeline" class="drawer-link">Production Timeline</a></li>
+      <li><a href="#sign-off" class="drawer-link">Client Sign-Off Portal</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <div class="drawer-am-info">
+        <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Assigned Account Manager:</div>
+        <div style="font-weight: 700; color: #fff; font-size: 14px;">Ayaz</div>
+        <a href="mailto:ayaz@neogentechnologies.com" style="color: var(--ice-blue); font-size: 12px; text-decoration: none;">ayaz@neogentechnologies.com</a>
+      </div>
+      <a href="#configurator" class="btn btn-gold btn-sm" style="width: 100%; margin-top: 12px;" onclick="closeMobileDrawer()">Open Scope Configurator</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-meta-bar">
+              <span class="badge badge-gold">Official Production Proposal</span>
+              <span class="badge badge-blue">Document Ref: NGT-SOW-2026-ROCKY</span>
+              <span class="badge badge-spruce">Confidential Client Brief</span>
+            </div>
+
+            <h1 class="hero-title">
+              Scope of Work: <br>
+              <span class="gradient-text-gold serif-font">Rocky – The Rockefeller Christmas Tree</span>
+            </h1>
+
+            <p class="hero-description">
+              A comprehensive technical and creative production plan engineered by <strong>Neo Gen Technologies</strong> for creator & screenwriter <strong>Jennie E. Nicassio (Nieje Productions)</strong>. Delivering broadcast-grade 2D family animation, high-retention 9:16 vertical series adaptation, full-character voice over architecture, and turn-key YouTube channel publishing.
+            </p>
+
+            <!-- Dedicated Account Manager Badge -->
+            <div class="hero-account-manager-card">
+              <div class="am-avatar-circle">A</div>
+              <div class="am-details">
+                <h4>Ayaz — Senior Account Manager & Producer</h4>
+                <p>Creative Media & Animation Production Division • Neo Gen Technologies</p>
+                <p>Direct Inquiry: <a href="mailto:ayaz@neogentechnologies.com" class="am-email-link">ayaz@neogentechnologies.com</a></p>
+              </div>
+            </div>
+
+            <div class="hero-cta-group">
+              <a href="#configurator" class="btn btn-gold">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Launch Interactive Scope Builder
+              </a>
+              <a href="#dual-track" class="btn btn-outline">Explore Dual-Track Strategy</a>
+            </div>
+          </div>
+
+          <!-- Hero Visual Showcase with Extracted Assets -->
+          <div class="hero-visual-card">
+            <span class="badge badge-gold" style="margin-bottom: 12px;">Original Book IP & Animation Visuals</span>
+            
+            <!-- Extracted Title Logo -->
+            <img src="/assets/rocky_cover_title_clean.png" alt="Rocky The Rockefeller Christmas Tree Title Logo" class="extracted-title-logo-img">
+
+            <div class="hero-book-preview-row">
+              <div class="mini-preview-frame">
+                <img src="/assets/rocky_front_cover.png" alt="Rocky Book Front Cover">
+                <span class="mini-preview-tag">Official Cover Proof</span>
+              </div>
+              <div class="mini-preview-frame">
+                <img src="/assets/rocky_character_spotlight.png" alt="Rocky Character Spotlight">
+                <span class="mini-preview-tag">Lead Protagonist</span>
+              </div>
+            </div>
+            
+            <p style="font-size: 11px; color: var(--text-muted); margin-top: 14px;">
+              Based on the published work written by Jennie Nicassio & illustrated by Dina Colangelo • Nieje Productions
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: EXECUTIVE BRIEF & CREATIVE VISION -->
+    <section class="section" id="summary">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Partnership Memorandum</span>
+          <h2 class="section-title">Executive Brief & Strategic Vision</h2>
+          <p class="section-lead">
+            Uniting Jennie E. Nicassio's acclaimed vertical drama storytelling and heartfelt holiday literature with Neo Gen Technologies' advanced 2D animation, voice acting, and digital distribution engine.
+          </p>
+        </div>
+
+        <div class="exec-grid">
+          <div class="glass-card exec-text-block">
+            <h3>From Storybook to Living Holiday Classic</h3>
+            <p>
+              <strong>"Rocky: The Rockefeller Christmas Tree — The Little Tree with Big Dreams"</strong> is more than a children's holiday fable; it is a timeless narrative of self-worth, courage, sacrifice, and the transformational power of genuine belief.
+            </p>
+            <p>
+              Neo Gen Technologies has developed this Scope of Work specifically calibrated to Jennie Nicassio’s exceptional background. Having authored the published work and crafted both the <strong>40-page animated feature screenplay</strong> and the <strong>33-beat narrative board</strong>—paired with deep industry expertise in <strong>AI-assisted vertical short-drama storytelling (9:16)</strong>—this project is poised for a revolutionary multi-platform release.
+            </p>
+            <p>
+              Rather than confining Rocky to a single broadcast format, our strategy introduces a <strong>Dual-Track Release Engine</strong>: combining a prestigious 2D horizontal film/pilot for streaming and festivals with a 30-episode vertical micro-drama series designed to capture millions of views across YouTube Shorts, TikTok, and Instagram during the peak Q4 holiday season.
+            </p>
+
+            <div class="exec-highlights-grid">
+              <div class="highlight-stat-box">
+                <div class="highlight-stat-num">40</div>
+                <div class="highlight-stat-label">Screenplay Pages Adapted into 2D Visual Beats</div>
+              </div>
+              <div class="highlight-stat-box">
+                <div class="highlight-stat-num">33</div>
+                <div class="highlight-stat-label">Full Narrative Beats in Storyboard Pipeline</div>
+              </div>
+              <div class="highlight-stat-box">
+                <div class="highlight-stat-num">6+</div>
+                <div class="highlight-stat-label">Distinct Character Voice-Over Roles Cast</div>
+              </div>
+              <div class="highlight-stat-box">
+                <div class="highlight-stat-num">4K DCI</div>
+                <div class="highlight-stat-label">Theatrical Resolution & Dolby 5.1 Mastering</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Account Manager & Proposal Metadata Card -->
+          <div class="glass-card" style="border-color: var(--border-highlight);">
+            <h3 style="font-size: 18px; margin-bottom: 16px; color: #fff; display: flex; align-items: center; gap: 8px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              Account Management Protocol
+            </h3>
+            
+            <p style="font-size: 13px; color: var(--text-light); margin-bottom: 16px;">
+              Your project will be directly stewarded by Neo Gen Technologies' dedicated Account Manager:
+            </p>
+
+            <div style="background: rgba(0, 136, 255, 0.08); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-highlight); margin-bottom: 18px;">
+              <div style="font-weight: 700; color: #fff; font-size: 15px;">Ayaz</div>
+              <div style="font-size: 12px; color: var(--ice-blue);">Senior Account Manager & Executive Producer</div>
+              <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
+                Email: <a href="mailto:ayaz@neogentechnologies.com" style="color: #fff; font-weight: 600;">ayaz@neogentechnologies.com</a>
+              </div>
+              <div style="font-size: 12px; color: var(--text-muted);">Neo Gen Technologies HQ • Client Solutions Pod 4</div>
+            </div>
+
+            <h4 style="font-size: 13px; color: var(--text-gold); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px;">Production Governance:</h4>
+            <ul style="list-style: none; font-size: 12px; color: var(--text-light); display: flex; flex-direction: column; gap: 8px;">
+              <li style="display: flex; gap: 8px;"><span>✓</span> <strong>Weekly Synchronous Sprint Reviews</strong> (Video conference with Ayaz)</li>
+              <li style="display: flex; gap: 8px;"><span>✓</span> <strong>Real-Time Asset Review Portal</strong> (Frame.io timecoded comments)</li>
+              <li style="display: flex; gap: 8px;"><span>✓</span> <strong>Priority 24-Hour Email SLA</strong> directly with account manager</li>
+              <li style="display: flex; gap: 8px;"><span>✓</span> <strong>Milestone-Based Escrow</strong> & formal client sign-off gates</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: IP, STORY BIBLE & BEAT BOARD BREAKDOWN -->
+    <section class="section" id="story-bible">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Intellectual Property & Script Analysis</span>
+          <h2 class="section-title">The Story Engine & Character Universe</h2>
+          <p class="section-lead">
+            Synthesized directly from Jennie Nicassio's 40-page screenplay and 9-page feature beat board.
+          </p>
+        </div>
+
+        <!-- Character Profiles Grid -->
+        <h3 style="font-size: 20px; color: #fff; margin-bottom: 18px; display: flex; align-items: center; gap: 10px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Primary Character Roster & Voice Specs
+        </h3>
+
+        <div class="characters-grid">
+          <!-- Rocky -->
+          <div class="glass-card character-card" style="border-top-color: var(--spruce-green);">
+            <div class="char-header">
+              <span class="char-name">Rocky (The Norway Spruce)</span>
+              <span class="char-archetype">Lead Protagonist</span>
+            </div>
+            <p class="char-desc">
+              Small, crooked, and earnest with bent branches and sparse needles. Rocky dreams of standing at Rockefeller Center. His transformation from physical yearning to selfless heroism makes him an unforgettable icon.
+            </p>
+            <div class="char-quote">"Believe? That's what I'll do! I'll drink lots of water, and I'll grow tall and green!"</div>
+            <div style="margin-top: 10px; font-size: 11px; color: var(--ice-blue);">
+              <strong>VO Profile:</strong> Warm, youthful, emotional range (vulnerable to triumphant), ~450 lines.
+            </div>
+          </div>
+
+          <!-- Mary Louise -->
+          <div class="glass-card character-card" style="border-top-color: var(--rocky-gold);">
+            <div class="char-header">
+              <span class="char-name">Mary Louise</span>
+              <span class="char-archetype">Guardian Fairy of the Forest</span>
+            </div>
+            <p class="char-desc">
+              Teacup-sized with iridescent wings, fearless and wise. Refuses to give Rocky magical shortcuts, teaching him that belief requires discipline, resilience, and heart.
+            </p>
+            <div class="char-quote">"There is no such thing as magic. You just have to believe in yourself without a doubt!"</div>
+            <div style="margin-top: 10px; font-size: 11px; color: var(--ice-blue);">
+              <strong>VO Profile:</strong> Sparkling, witty, maternal yet sharp authority, ~280 lines.
+            </div>
+          </div>
+
+          <!-- Bruce Spruce -->
+          <div class="glass-card character-card" style="border-top-color: #3b82f6;">
+            <div class="char-header">
+              <span class="char-name">Bruce Spruce</span>
+              <span class="char-archetype">Antagonist with Redemption Arc</span>
+            </div>
+            <p class="char-desc">
+              Towering, symmetrical, and arrogant Blue Spruce who bullies Rocky. Breaks under the ice storm and is saved by Rocky, prompting his public confession and respect.
+            </p>
+            <div class="char-quote">"Between you and me, you don't stand a chance. You're sure to lose!"</div>
+            <div style="margin-top: 10px; font-size: 11px; color: var(--ice-blue);">
+              <strong>VO Profile:</strong> Booming baritone, boastful, softening to humble reverence, ~210 lines.
+            </div>
+          </div>
+
+          <!-- AJ the Squirrel -->
+          <div class="glass-card character-card" style="border-top-color: #f97316;">
+            <div class="char-header">
+              <span class="char-name">AJ the Squirrel</span>
+              <span class="char-archetype">Comic Foil Turned Ally</span>
+            </div>
+            <p class="char-desc">
+              Hyperactive, sarcastic acrobat who sings taunting rhymes about Rocky before realizing true courage and helping him untie Mary Louise's trap. Stows away to NYC.
+            </p>
+            <div class="char-quote">"You're limp and bare; you'll never be the Rockefeller Christmas Tree!"</div>
+            <div style="margin-top: 10px; font-size: 11px; color: var(--ice-blue);">
+              <strong>VO Profile:</strong> Rapid-fire tempo, comedic singing, emotional sincerity in Act 3, ~320 lines.
+            </div>
+          </div>
+
+          <!-- Mrs. Pickles -->
+          <div class="glass-card character-card" style="border-top-color: #ec4899;">
+            <div class="char-header">
+              <span class="char-name">Mrs. Pickles (The Skunk)</span>
+              <span class="char-archetype">The Vanity Diva</span>
+            </div>
+            <p class="char-desc">
+              Obsessed with her reflection in a silver hand mirror. When Rocky falls into despair, she places her mirror face-down in the snow in quiet solidarity.
+            </p>
+            <div class="char-quote">"Nobody look at me until my tail is fluffed! ...Rocky, you have true grandeur."</div>
+            <div style="margin-top: 10px; font-size: 11px; color: var(--ice-blue);">
+              <strong>VO Profile:</strong> Theatrical, prim, deadpan humor with hidden warmth, ~110 lines.
+            </div>
+          </div>
+
+          <!-- Old Oak & Pip -->
+          <div class="glass-card character-card" style="border-top-color: #10b981;">
+            <div class="char-header">
+              <span class="char-name">Old Oak & Pip the Sapling</span>
+              <span class="char-archetype">Chorus & Next Generation</span>
+            </div>
+            <p class="char-desc">
+              Old Oak holds the memory of past chosen trees. Pip is the tiny sapling who Rocky shields during the ice storm and who carries Rocky's legend into future winters.
+            </p>
+            <div class="char-quote">"Where does a Rockefeller tree go when the lights go dark? Into the houses of families."</div>
+            <div style="margin-top: 10px; font-size: 11px; color: var(--ice-blue);">
+              <strong>VO Profile:</strong> Resonant storybook narration + bright child sapling voice, ~180 lines.
+            </div>
+          </div>
+        </div>
+
+        <!-- 33-BEAT BOARD INTERACTIVE EXPLORER -->
+        <div class="glass-card" style="margin-top: 30px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <h3 style="font-size: 18px; color: #fff;">Animated Feature Beat Board (33 Sequential Beats)</h3>
+              <p style="font-size: 12px; color: var(--text-muted);">Mapped directly to production storyboards, animation keys, and shot lists.</p>
+            </div>
+            <div class="beats-tabs-bar" style="margin-bottom: 0; padding-bottom: 0; border-bottom: none;">
+              <button class="beat-tab-btn active" data-act="all">All Beats (1–33)</button>
+              <button class="beat-tab-btn" data-act="act1">Act 1: The Hollow (Beats 1–8)</button>
+              <button class="beat-tab-btn" data-act="act2">Act 2: The Sacrifice & Ice (Beats 9–24)</button>
+              <button class="beat-tab-btn" data-act="act3">Act 3: New York City (Beats 25–33)</button>
+            </div>
+          </div>
+
+          <div class="beats-grid" id="beatsContainer">
+            <!-- Dynamically populated or rendered via JS with full beat board details -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: DUAL-TRACK STRATEGIC APPROACH -->
+    <section class="section" id="dual-track">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Distribution Architecture</span>
+          <h2 class="section-title">The Recommended Approach: Dual-Track Production</h2>
+          <p class="section-lead">
+            Maximizing holiday reach and commercial longevity by combining cinematic long-form with viral vertical episodic storytelling.
+          </p>
+        </div>
+
+        <div class="dual-track-container">
+          <!-- Track A: Cinematic 2D -->
+          <div class="track-card">
+            <span class="badge badge-blue track-badge-top">Track A: Prestige Broadcast & Festival</span>
+            <h3 class="track-title">Cinematic 2D Horizontal Feature / Pilot</h3>
+            <p class="track-desc">
+              A lavish, classically animated 16:9 widescreen presentation featuring hand-painted backgrounds, multiplane parallax, and a full orchestral holiday score. Designed for streaming acquisitions (Netflix, Disney+, Apple TV+), international film festivals, and high-prestige YouTube premieres.
+            </p>
+            <div class="track-specs-table">
+              <div class="spec-row">
+                <div class="spec-label"><span class="icon">✓</span> Aspect Ratio:</div>
+                <div class="spec-value">16:9 Cinema 4K UHD (3840×2160) @ 24fps</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label"><span class="icon">✓</span> Visual Style:</div>
+                <div class="spec-value">Rich textured storybook aesthetic with warm holiday volumetric lighting</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label"><span class="icon">✓</span> Sound Design:</div>
+                <div class="spec-value">Dolby 5.1 surround sound + pristine stereo master</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label"><span class="icon">✓</span> Formats:</div>
+                <div class="spec-value">3–5 Min Proof-of-Concept Pilot OR Full 40-Min Screenplay Special</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label"><span class="icon">✓</span> Festival Readiness:</div>
+                <div class="spec-value">DCP package, subtitle tracks, festival press kit</div>
+              </div>
+            </div>
+            <a href="#pricing-models" class="btn btn-outline" style="margin-top: auto;">View Pilot & Feature Pricing</a>
+          </div>
+
+          <!-- Track B: Vertical Series (Jennie's Superpower) -->
+          <div class="track-card featured-track">
+            <span class="badge badge-gold track-badge-top">Track B: Viral Short-Drama Series (Recommended)</span>
+            <h3 class="track-title">30-Episode 9:16 Vertical Series</h3>
+            <p class="track-desc">
+              Tailored specifically to Jennie Nicassio’s vertical short-drama mastery. 30 serialized episodes (60–90 seconds each) built with high-velocity hooks, cliffhangers, and character emotional turns. Engineered to dominate YouTube Shorts, TikTok, and Instagram Reels leading up to Christmas.
+            </p>
+            <div class="track-specs-table">
+              <div class="spec-row">
+                <div class="spec-label"><span class="icon">✓</span> Aspect Ratio:</div>
+                <div class="spec-value">9:16 Mobile-Optimized Fullscreen (1080×1920) @ 24fps/30fps</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label"><span class="icon">✓</span> Episodic Architecture:</div>
+                <div class="spec-value">3-second visual hook, fast conflict, micro-cliffhanger on every episode</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label"><span class="icon">✓</span> Algorithmic Virality:</div>
+                <div class="spec-value">Built for binge-watching, swipe-to-next & organic holiday sharing</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label"><span class="icon">✓</span> Book Sales Funnel:</div>
+                <div class="spec-value">Direct pinned call-to-action on every episode driving to Amazon book purchases</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label"><span class="icon">✓</span> Turnaround:</div>
+                <div class="spec-value">Rapid 8-to-10-week production cycle ready for Q4 holiday rollout</div>
+              </div>
+            </div>
+            <a href="#pricing-models" class="btn btn-gold" style="margin-top: auto;">Explore Vertical Series Module</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: 2D VIDEO CREATION ENGINE & PIPELINE -->
+    <section class="section" id="animation-engine">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Studio Workflow & Deliverables</span>
+          <h2 class="section-title">The 2D Animation Production Engine</h2>
+          <p class="section-lead">
+            A battle-tested 5-phase animation methodology ensuring Hollywood-grade visual fidelity, predictable milestone gates, and transparent delivery.
+          </p>
+        </div>
+
+        <!-- 5 Phase Row -->
+        <div class="pipeline-phase-row">
+          <!-- Phase 1 -->
+          <div class="phase-card">
+            <div class="phase-num">Phase 01</div>
+            <div class="phase-title">Pre-Production & Visual Dev</div>
+            <div class="phase-timing">Weeks 1–4</div>
+            <ul class="phase-items">
+              <li>Script Breakdown & Adaptation</li>
+              <li>360° Character Model Sheets</li>
+              <li>Expression & Turnaround Bibles</li>
+              <li>Color Script & Mood Boards</li>
+              <li>33-Beat Storyboard & Animatic</li>
+              <li>Scratch Voice & Timing Sync</li>
+            </ul>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="phase-card">
+            <div class="phase-num">Phase 02</div>
+            <div class="phase-title">Backgrounds & Asset Painting</div>
+            <div class="phase-timing">Weeks 5–8</div>
+            <ul class="phase-items">
+              <li>Hidden Forest Winter Valley</li>
+              <li>Rocky's Snowy Shaded Hollow</li>
+              <li>Mary Louise's Bramble House</li>
+              <li>5th Avenue Manhattan Skyline</li>
+              <li>Rockefeller Plaza at Night</li>
+              <li>Props, Ice Crystals & Trees</li>
+            </ul>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="phase-card">
+            <div class="phase-num">Phase 03</div>
+            <div class="phase-title">2D Animation & Cleanup</div>
+            <div class="phase-timing">Weeks 9–16</div>
+            <ul class="phase-items">
+              <li>Hybrid Cutout & Frame-by-Frame</li>
+              <li>Character Rigging & Physics</li>
+              <li>Phoneme-Precise Lip Synchronization</li>
+              <li>Secondary Needle & Branch Motion</li>
+              <li>Snowflake & Wind Interactions</li>
+              <li>Rough Pencil & Clean Ink Line passes</li>
+            </ul>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="phase-card">
+            <div class="phase-num">Phase 04</div>
+            <div class="phase-title">Compositing, VFX & Lighting</div>
+            <div class="phase-timing">Weeks 17–19</div>
+            <ul class="phase-items">
+              <li>Multiplane Parallax Camera Depths</li>
+              <li>Volumetric Helicopter Searchlights</li>
+              <li>Ice Storm Glaze & Prismatic Refractions</li>
+              <li>50,000 Holiday Bulb Illumination Glow</li>
+              <li>Atmospheric Snowfall Layers</li>
+              <li>DaVinci Resolve Color Grading</li>
+            </ul>
+          </div>
+
+          <!-- Phase 5 -->
+          <div class="phase-card">
+            <div class="phase-num">Phase 05</div>
+            <div class="phase-title">Sound Design, Foley & Mix</div>
+            <div class="phase-timing">Weeks 18–20</div>
+            <ul class="phase-items">
+              <li>Final Broadcast Voice Track Mastering</li>
+              <li>Foley: Branch Cracks, Ice Breaks, Crunch</li>
+              <li>Original Holiday Orchestral Score</li>
+              <li>Full 5.1 Surround Sound Delivery</li>
+              <li>Loudness Compliance (-14 LUFS / -24 LKFS)</li>
+              <li>Final Master Archival (ProRes 4444 & 4K)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Technical Software & Specs -->
+        <div class="glass-card" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+          <div>
+            <h4 style="color: #fff; margin-bottom: 4px;">Industry-Standard Production Pipeline Suite</h4>
+            <p style="font-size: 12px; color: var(--text-muted);">
+              Toon Boom Harmony 22 • Storyboard Pro • Adobe After Effects • Adobe Animate • DaVinci Resolve Studio • Pro Tools HD
+            </p>
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <span class="badge badge-blue">4K 3840x2160 UHD</span>
+            <span class="badge badge-spruce">24.000 FPS Native</span>
+            <span class="badge badge-gold">ProRes 4444 XQ Masters</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: VOICE-OVER (VO) ARCHITECTURE & BREAKDOWN -->
+    <section class="section" id="voice-overs">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Audio Talent & Studio Matrix</span>
+          <h2 class="section-title">Voice-Over Architecture, Rates & Add-Ons</h2>
+          <p class="section-lead">
+            Comprehensive character voice requirements, studio time allocations, retake policies, and global dubbing expansions.
+          </p>
+        </div>
+
+        <!-- Voice Over Character Table -->
+        <div class="vo-table-wrapper">
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Character Role</th>
+                <th>Actor Type / Demographics</th>
+                <th>Dialogue Lines</th>
+                <th>Estimated Word Count</th>
+                <th>Required Studio Time</th>
+                <th>Delivery Deliverables</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Rocky</strong> (Lead)</td>
+                <td>Youthful, heartfelt male/female child or teen sound (tender, determined)</td>
+                <td>~450 lines</td>
+                <td>~3,600 words</td>
+                <td>4.5 Studio Hours</td>
+                <td>Raw 24-bit/96kHz WAV + De-clicked Clean Vocal Tracks</td>
+              </tr>
+              <tr>
+                <td><strong>Mary Louise</strong></td>
+                <td>Bright, warm female soprano, witty authority, teacup fairy presence</td>
+                <td>~280 lines</td>
+                <td>~2,200 words</td>
+                <td>3.0 Studio Hours</td>
+                <td>Vocal stem with fairy shimmer harmonics & clean alt takes</td>
+              </tr>
+              <tr>
+                <td><strong>Bruce Spruce</strong></td>
+                <td>Booming, pompous resonant baritone, transition to humble respect</td>
+                <td>~210 lines</td>
+                <td>~1,700 words</td>
+                <td>2.5 Studio Hours</td>
+                <td>Deep chest resonance pass + stereo room capture</td>
+              </tr>
+              <tr>
+                <td><strong>AJ the Squirrel</strong></td>
+                <td>Rapid, energetic comic tenor, eccentric singing and rhyme delivery</td>
+                <td>~320 lines</td>
+                <td>~2,500 words</td>
+                <td>3.5 Studio Hours</td>
+                <td>Spoken dialogue + synchronized musical taunt singing stem</td>
+              </tr>
+              <tr>
+                <td><strong>Mrs. Pickles</strong></td>
+                <td>Prim, melodramatic diva female alto with comedic timing</td>
+                <td>~110 lines</td>
+                <td>~900 words</td>
+                <td>1.5 Studio Hours</td>
+                <td>Clean comedic dialogue + vanity mirror murmur stems</td>
+              </tr>
+              <tr>
+                <td><strong>Narrator / Old Oak</strong></td>
+                <td>Classic, rich, resonant storybook voice (warm grandfatherly baritone)</td>
+                <td>~180 lines</td>
+                <td>~1,500 words</td>
+                <td>2.0 Studio Hours</td>
+                <td>Master storybook narration pass with chapter markers</td>
+              </tr>
+              <tr>
+                <td><strong>Ensemble / Saplings (Pip)</strong></td>
+                <td>Youthful crowd reactions, forest whispers, reindeer drills</td>
+                <td>Group ADR</td>
+                <td>~600 words</td>
+                <td>2.0 Studio Hours</td>
+                <td>Layered forest crowd walla & atmospheric chants</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Voice-Over Tiers & Add-On Modules -->
+        <h3 style="font-size: 20px; color: #fff; margin-bottom: 16px;">Voice-Over Packaging & Studio Add-On Rates</h3>
+
+        <div class="vo-addons-grid">
+          <!-- Multi-Voice Ensemble -->
+          <div class="vo-addon-card popular">
+            <span class="badge badge-gold" style="margin-bottom: 8px;">Most Cost-Effective</span>
+            <div class="vo-addon-title">Pro Indie Multi-Voice Cast</div>
+            <div class="vo-addon-price">$850 <span style="font-size: 12px; color: var(--text-muted);">/ Complete Cast</span></div>
+            <div class="vo-addon-desc">
+              Three versatile broadcast voice actors covering all roles (Lead Voice A: Rocky + Pip; Lead Voice B: Mary Louise + Mrs. Pickles; Lead Voice C: Bruce + AJ + Old Oak).
+            </div>
+            <ul style="font-size: 11px; color: var(--text-muted); list-style: none; display: flex; flex-direction: column; gap: 4px;">
+              <li>✓ Includes 14 hours directed studio recording</li>
+              <li>✓ Includes 2 rounds of pronunciation/pace pickups</li>
+              <li>✓ Full commercial buyout for YouTube & streaming</li>
+            </ul>
+          </div>
+
+          <!-- Dedicated Full Cast -->
+          <div class="vo-addon-card">
+            <span class="badge badge-blue" style="margin-bottom: 8px;">Festival & Broadcast Pick</span>
+            <div class="vo-addon-title">Dedicated Individual Cast</div>
+            <div class="vo-addon-price">$1,650 <span style="font-size: 12px; color: var(--text-muted);">/ Complete Cast</span></div>
+            <div class="vo-addon-desc">
+              Six dedicated, distinct professional actors assigned individually to each role for maximum tonal variety and festival prestige.
+            </div>
+            <ul style="font-size: 11px; color: var(--text-muted); list-style: none; display: flex; flex-direction: column; gap: 4px;">
+              <li>✓ Includes 20 hours directed studio recording</li>
+              <li>✓ Live remote Zoom/Source-Connect client attendance</li>
+              <li>✓ Dedicated child/teen voice actor for Rocky</li>
+            </ul>
+          </div>
+
+          <!-- Studio Add-on Rates & Re-Reads -->
+          <div class="vo-addon-card">
+            <span class="badge badge-spruce" style="margin-bottom: 8px;">Hourly & Retake Add-Ons</span>
+            <div class="vo-addon-title">Studio Add-On Rates</div>
+            <div class="vo-addon-price">$65 <span style="font-size: 12px; color: var(--text-muted);">/ Studio Hour</span></div>
+            <div class="vo-addon-desc">
+              Additional soundstage / recording booth time with senior audio engineer and voice director.
+            </div>
+            <ul style="font-size: 11px; color: var(--text-muted); list-style: none; display: flex; flex-direction: column; gap: 4px;">
+              <li>✓ Post-lock script revision re-record: <strong>$25 / line</strong></li>
+              <li>✓ Dedicated 2-hour pickup session block: <strong>$120</strong></li>
+              <li>✓ Foreign Language Dubbing (Spanish/French): <strong>$450 / lang</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: PRICING MODELS & ENGAGEMENT PACKAGES -->
+    <section class="section" id="pricing-models">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Clear, Milestone-Based Budgets</span>
+          <h2 class="section-title">Investment Packages & Engagement Models</h2>
+          <p class="section-lead">
+            Modular production packages calibrated to project milestones, deliverables, and commercial objectives.
+          </p>
+        </div>
+
+        <!-- 3 Core Packages -->
+        <div class="pricing-grid">
+          <!-- Pilot Package -->
+          <div class="pricing-card">
+            <div class="pricing-plan-name">Festival Proof-of-Concept Pilot</div>
+            <div class="pricing-plan-sub">3–5 Minute 2D Cinematic Short (Beats 1–8: The Hidden Forest & Mary Louise)</div>
+            
+            <div class="pricing-price-box">
+              <span class="pricing-currency">$</span>
+              <span class="pricing-amount">4,950</span>
+              <span class="pricing-period">Fixed Project Fee</span>
+            </div>
+
+            <ul class="pricing-deliverables-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Complete storyboard & animatic for Beats 1–8
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Character model sheets: Rocky, Bruce, Mary Louise
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Full 2D keyframing & cleanup in 4K UHD
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Multi-voice professional voice acting included
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Original holiday score & stereo sound mix
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Turnaround: <strong>6 Weeks</strong> from kickoff
+              </li>
+            </ul>
+
+            <button class="btn btn-outline select-package-btn" data-pkg="pilot_2d" data-price="4950">Select Pilot Model</button>
+          </div>
+
+          <!-- Vertical Series Package (RECOMMENDED) -->
+          <div class="pricing-card featured">
+            <div class="pricing-card-badge">Highest Algorithmic ROI • Most Popular</div>
+            <div class="pricing-plan-name">30-Episode Vertical Micro-Drama</div>
+            <div class="pricing-plan-sub">9:16 Format for TikTok, Shorts & Reels (30 eps x 60–90s each)</div>
+            
+            <div class="pricing-price-box">
+              <span class="pricing-currency">$</span>
+              <span class="pricing-amount">8,850</span>
+              <span class="pricing-period">($295 per polished episode)</span>
+            </div>
+
+            <ul class="pricing-deliverables-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                30 fully animated vertical episodes covering the complete story arc
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Capitalizes on Jennie Nicassio's vertical short-drama script expertise
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Every episode features high-hook opening & cliffhanger ending
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Burned-in dynamic typography & animated captions
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Complete character voice over & energetic foley included
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Turnaround: <strong>8 Weeks</strong> (Rolling weekly episodic deliveries)
+              </li>
+            </ul>
+
+            <button class="btn btn-gold select-package-btn" data-pkg="vertical_series" data-price="8850">Select Vertical Series</button>
+          </div>
+
+          <!-- Full 40-Minute Animated Special -->
+          <div class="pricing-card">
+            <div class="pricing-plan-name">Full 40-Min Animated Special</div>
+            <div class="pricing-plan-sub">The Definitive Adaptation: All 40 Pages & 33 Narrative Beats</div>
+            
+            <div class="pricing-price-box">
+              <span class="pricing-currency">$</span>
+              <span class="pricing-amount">24,500</span>
+              <span class="pricing-period">Milestone Schedule (4 Gates of $6,125)</span>
+            </div>
+
+            <ul class="pricing-deliverables-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Complete 40-minute animated feature special in 4K UHD
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Over 70 custom painted 4K background environments
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Full dedicated 6-actor voice over cast recording
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Full symphonic holiday score & Dolby 5.1 theatrical mix
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Theatrical DCP master + International Broadcast M&E stems
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Turnaround: <strong>18 Weeks</strong> structured delivery
+              </li>
+            </ul>
+
+            <button class="btn btn-outline select-package-btn" data-pkg="full_special" data-price="24500">Select Full Feature Special</button>
+          </div>
+        </div>
+
+        <!-- Milestone Payment Gate Structure -->
+        <div class="glass-card" style="margin-bottom: 40px;">
+          <h4 style="font-size: 16px; color: #fff; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            Standard Cashflow & Milestone Payment Schedule
+          </h4>
+          <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 16px;">
+            Invoices are unlocked strictly upon client approval of each milestone gate:
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; text-align: center;">
+            <div style="background: rgba(255, 255, 255, 0.03); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+              <div style="color: var(--rocky-amber); font-weight: 800; font-size: 18px;">25%</div>
+              <div style="font-size: 12px; color: #fff; font-weight: 600;">Kickoff Deposit</div>
+              <div style="font-size: 11px; color: var(--text-muted);">Contract execution, visual dev initiation</div>
+            </div>
+            <div style="background: rgba(255, 255, 255, 0.03); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+              <div style="color: var(--rocky-amber); font-weight: 800; font-size: 18px;">25%</div>
+              <div style="font-size: 12px; color: #fff; font-weight: 600;">Animatic Lock</div>
+              <div style="font-size: 11px; color: var(--text-muted);">Storyboard, scratch VO, and pacing sign-off</div>
+            </div>
+            <div style="background: rgba(255, 255, 255, 0.03); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+              <div style="color: var(--rocky-amber); font-weight: 800; font-size: 18px;">25%</div>
+              <div style="font-size: 12px; color: #fff; font-weight: 600;">Rough Animation Pass</div>
+              <div style="font-size: 11px; color: var(--text-muted);">Keyframing, acting, and dialogue sync sign-off</div>
+            </div>
+            <div style="background: rgba(255, 255, 255, 0.03); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+              <div style="color: var(--rocky-amber); font-weight: 800; font-size: 18px;">25%</div>
+              <div style="font-size: 12px; color: #fff; font-weight: 600;">Final Master Hand-off</div>
+              <div style="font-size: 11px; color: var(--text-muted);">Compositing, score mix, and 4K export approval</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Monthly Retainer Plans (As Requested) -->
+        <div class="section-header" style="margin-bottom: 24px; text-align: left;">
+          <span class="section-subtitle">Ongoing Production Capacity</span>
+          <h3 style="font-size: 24px; color: #fff;">Monthly Retainer Plans (Dedicated Production Studio)</h3>
+          <p style="font-size: 13px; color: var(--text-muted);">
+            Ideal for continuous episodic expansion, seasonal spinoffs, and ongoing social media animation output.
+          </p>
+        </div>
+
+        <div class="retainer-plans-row">
+          <!-- Silver Retainer -->
+          <div class="retainer-card">
+            <div class="retainer-name">Silver Retainer</div>
+            <div class="retainer-cost">$1,450 <span style="font-size: 12px; color: var(--text-muted);">/ Month</span></div>
+            <ul class="retainer-features">
+              <li>4 vertical micro-episodes per month (9:16)</li>
+              <li>2 promotional social teaser clips</li>
+              <li>Basic YouTube & TikTok publishing scheduling</li>
+              <li>Standard character animation assets</li>
+              <li>Dedicated Slack channel with production pod</li>
+            </ul>
+            <button class="btn btn-outline btn-sm select-retainer-btn" data-retainer="retainer_silver" data-price="1450">Choose Silver Retainer</button>
+          </div>
+
+          <!-- Gold Retainer -->
+          <div class="retainer-card" style="border-color: var(--border-gold); background: linear-gradient(180deg, rgba(245, 158, 11, 0.05) 0%, rgba(15, 25, 45, 0.8) 100%);">
+            <div class="retainer-name">Gold Retainer (Recommended)</div>
+            <div class="retainer-cost">$2,650 <span style="font-size: 12px; color: var(--text-muted);">/ Month</span></div>
+            <ul class="retainer-features">
+              <li>8 vertical micro-episodes per month (9:16)</li>
+              <li>1 horizontal holiday vignette / featurette clip</li>
+              <li>Full YouTube Channel SEO, custom thumbnails & tags</li>
+              <li>Priority voice over recording & custom soundscapes</li>
+              <li>Weekly analytics & audience growth reporting</li>
+            </ul>
+            <button class="btn btn-gold btn-sm select-retainer-btn" data-retainer="retainer_gold" data-price="2650">Choose Gold Retainer</button>
+          </div>
+
+          <!-- Platinum Retainer -->
+          <div class="retainer-card">
+            <div class="retainer-name">Platinum Dedicated Pod</div>
+            <div class="retainer-cost">$4,500 <span style="font-size: 12px; color: var(--text-muted);">/ Month</span></div>
+            <ul class="retainer-features">
+              <li>Full-time dedicated animation pod (Lead Animator, Background Artist, Compositor)</li>
+              <li>Up to 15 vertical episodes or 5 horizontal minutes per month</li>
+              <li>Comprehensive multi-platform distribution (YouTube, TikTok, IG, FB)</li>
+              <li>Complete rights management, Content ID & Amazon book funneling</li>
+              <li>Direct executive producer consultation with Ayaz</li>
+            </ul>
+            <button class="btn btn-outline btn-sm select-retainer-btn" data-retainer="retainer_platinum" data-price="4500">Choose Platinum Pod</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: YOUTUBE CHANNEL MANAGEMENT & PUBLISHING STRATEGY -->
+    <section class="section" id="youtube-strategy">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Turn-Key Audience Engine</span>
+          <h2 class="section-title">YouTube Channel Management & Publishing Engine</h2>
+          <p class="section-lead">
+            A comprehensive channel management framework to turn the Rocky IP into a high-earning, self-sustaining family entertainment brand.
+          </p>
+        </div>
+
+        <div class="yt-strategy-grid">
+          <div class="glass-card">
+            <h3 style="font-size: 18px; color: #fff; margin-bottom: 14px;">The Rocky Holiday Domination Playbook</h3>
+            <p style="font-size: 13px; color: var(--text-light); margin-bottom: 14px;">
+              Publishing animation without an aggressive discovery and SEO strategy leaves views on the table. Neo Gen Technologies manages every facet of your YouTube presence:
+            </p>
+
+            <div class="yt-features-list">
+              <div class="yt-feature-item">
+                <div class="yt-feature-title">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+                  Custom Brand Suite
+                </div>
+                <div class="yt-feature-desc">High-DPI animated banners, mascot avatars (Rocky & Mary Louise), video watermark, and branded end-screens.</div>
+              </div>
+
+              <div class="yt-feature-item">
+                <div class="yt-feature-title">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+                  Weekly Cadence Strategy
+                </div>
+                <div class="yt-feature-desc">Synchronized publishing calendar: 2 Shorts/week + 1 episodic drop leading directly up to the Rockefeller lighting in December.</div>
+              </div>
+
+              <div class="yt-feature-item">
+                <div class="yt-feature-title">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  SEO & High-CTR Metadata
+                </div>
+                <div class="yt-feature-desc">Keyword research targeting high-volume holiday queries ("Rockefeller tree story", "Christmas animated short") + dynamic tags.</div>
+              </div>
+
+              <div class="yt-feature-item">
+                <div class="yt-feature-title">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                  Amazon Book Integration
+                </div>
+                <div class="yt-feature-desc">Pinned comments, description links, and video cards routing holiday audiences directly to buy the published Amazon book.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- YouTube Retainer Pricing Cards -->
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div class="glass-card" style="border-color: var(--border-highlight);">
+              <span class="badge badge-blue" style="margin-bottom: 6px;">3-Month Program</span>
+              <h4 style="color: #fff; font-size: 16px;">Channel Foundation & Launch Plan</h4>
+              <div style="font-size: 22px; font-weight: 800; color: var(--rocky-amber); margin: 6px 0;">
+                $450 <span style="font-size: 11px; color: var(--text-muted);">/ Month ($1,350 total)</span>
+              </div>
+              <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+                Complete channel setup, keyword architecture, 4 custom thumbnails per month, metadata copywriting, and upload scheduling.
+              </p>
+              <button class="btn btn-outline btn-sm select-yt-btn" data-yt="yt_launch" data-price="1350">Include Launch Plan</button>
+            </div>
+
+            <div class="glass-card" style="border-color: var(--border-gold); background: linear-gradient(180deg, rgba(245, 158, 11, 0.08) 0%, rgba(15, 25, 45, 0.8) 100%);">
+              <span class="badge badge-gold" style="margin-bottom: 6px;">6-Month Full Campaign</span>
+              <h4 style="color: #fff; font-size: 16px;">Holiday Dominance & Growth Plan</h4>
+              <div style="font-size: 22px; font-weight: 800; color: var(--rocky-amber); margin: 6px 0;">
+                $390 <span style="font-size: 11px; color: var(--text-muted);">/ Month ($2,340 total)</span>
+              </div>
+              <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+                Includes Launch plan + A/B Thumbnail Testing, Community Tab Polls, YouTube Shorts Remixes, Content ID copyright protection, and Amazon book conversion tracking.
+              </p>
+              <button class="btn btn-gold btn-sm select-yt-btn" data-yt="yt_growth" data-price="2340">Include 6-Month Campaign</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: INTERACTIVE SCOPE & BUDGET CONFIGURATOR -->
+    <section class="section" id="configurator">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Real-Time Proposal Customizer</span>
+          <h2 class="section-title">Interactive Scope & Budget Configurator</h2>
+          <p class="section-lead">
+            Select your preferred animation format, voice acting tier, studio add-ons, and channel management options. The live quote updates instantly.
+          </p>
+        </div>
+
+        <div class="configurator-wrapper">
+          <!-- Configuration Controls -->
+          <div class="config-controls-col">
+            <!-- 1. Base Animation Format -->
+            <div class="config-section-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+              1. Select Base 2D Animation Production
+            </div>
+            
+            <div class="config-options-group">
+              <label class="config-radio-label selected" id="opt_pilot">
+                <div class="config-radio-left">
+                  <input type="radio" name="base_pkg" value="4950" data-name="Festival Proof-of-Concept Pilot (3–5 Min)" checked>
+                  <div>
+                    <div class="config-name">Festival Proof-of-Concept Pilot (3–5 Min)</div>
+                    <div class="config-sub">Beats 1–8 • High-impact festival & network pitch teaser</div>
+                  </div>
+                </div>
+                <div class="config-price">$4,950</div>
+              </label>
+
+              <label class="config-radio-label" id="opt_vertical">
+                <div class="config-radio-left">
+                  <input type="radio" name="base_pkg" value="8850" data-name="30-Episode Vertical Micro-Drama Series (9:16)">
+                  <div>
+                    <div class="config-name">30-Episode Vertical Micro-Drama Series (9:16) ⭐</div>
+                    <div class="config-sub">30 episodes x 60–90s ($295/ep) • Mobile-first TikTok & Shorts virality</div>
+                  </div>
+                </div>
+                <div class="config-price">$8,850</div>
+              </label>
+
+              <label class="config-radio-label" id="opt_feature">
+                <div class="config-radio-left">
+                  <input type="radio" name="base_pkg" value="24500" data-name="Full 40-Minute Animated Family Special">
+                  <div>
+                    <div class="config-name">Full 40-Minute Animated Family Special</div>
+                    <div class="config-sub">All 40 pages & 33 beats • Theatrical 4K master + Dolby 5.1</div>
+                  </div>
+                </div>
+                <div class="config-price">$24,500</div>
+              </label>
+            </div>
+
+            <!-- 2. Voice-Over Cast Architecture -->
+            <div class="config-section-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+              2. Voice-Over Cast & Recording Tier
+            </div>
+
+            <div class="config-options-group">
+              <label class="config-radio-label selected">
+                <div class="config-radio-left">
+                  <input type="radio" name="vo_tier" value="850" data-name="Pro Indie Multi-Voice Ensemble (3 Actors)" checked>
+                  <div>
+                    <div class="config-name">Pro Indie Multi-Voice Ensemble</div>
+                    <div class="config-sub">3 versatile actors covering full cast • 14 studio hrs included</div>
+                  </div>
+                </div>
+                <div class="config-price">$850</div>
+              </label>
+
+              <label class="config-radio-label">
+                <div class="config-radio-left">
+                  <input type="radio" name="vo_tier" value="1650" data-name="Dedicated 6-Actor Individual Ensemble">
+                  <div>
+                    <div class="config-name">Dedicated 6-Actor Individual Ensemble</div>
+                    <div class="config-sub">6 dedicated artists • 20 studio hrs • Live client attendance</div>
+                  </div>
+                </div>
+                <div class="config-price">$1,650</div>
+              </label>
+            </div>
+
+            <!-- 3. Add-On Services -->
+            <div class="config-section-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              3. Service Add-Ons & Enhancements
+            </div>
+
+            <div class="config-options-group">
+              <label class="config-radio-label">
+                <div class="config-radio-left">
+                  <input type="checkbox" name="addon_opt" value="1350" data-name="YouTube Channel Foundation & Launch (3 Months)">
+                  <div>
+                    <div class="config-name">YouTube Channel Launch Plan (3 Months)</div>
+                    <div class="config-sub">Complete branding, weekly scheduling, SEO & custom thumbnails ($450/mo)</div>
+                  </div>
+                </div>
+                <div class="config-price">+$1,350</div>
+              </label>
+
+              <label class="config-radio-label">
+                <div class="config-radio-left">
+                  <input type="checkbox" name="addon_opt" value="2340" data-name="YouTube Holiday Dominance Campaign (6 Months)">
+                  <div>
+                    <div class="config-name">YouTube 6-Month Holiday Campaign</div>
+                    <div class="config-sub">A/B thumbnail testing, community polls, Content ID & Amazon funneling ($390/mo)</div>
+                  </div>
+                </div>
+                <div class="config-price">+$2,340</div>
+              </label>
+
+              <label class="config-radio-label">
+                <div class="config-radio-left">
+                  <input type="checkbox" name="addon_opt" value="450" data-name="Spanish Holiday Localization & Synchronized Dubbing">
+                  <div>
+                    <div class="config-name">Spanish Language Holiday Dubbing</div>
+                    <div class="config-sub">Native Latin American / Spanish voice cast + synchronized audio mix</div>
+                  </div>
+                </div>
+                <div class="config-price">+$450</div>
+              </label>
+
+              <label class="config-radio-label">
+                <div class="config-radio-left">
+                  <input type="checkbox" name="addon_opt" value="390" data-name="Amazon Book Motion Graphics Promo Video (30s)">
+                  <div>
+                    <div class="config-name">Amazon Book Animated Promo Video (30s)</div>
+                    <div class="config-sub">Kinetic motion trailer advertising the published book on Amazon/socials</div>
+                  </div>
+                </div>
+                <div class="config-price">+$390</div>
+              </label>
+
+              <label class="config-radio-label">
+                <div class="config-radio-left">
+                  <input type="checkbox" name="addon_opt" value="250" data-name="Extended Voice-Over Studio Buffer (5 Additional Hours)">
+                  <div>
+                    <div class="config-name">Extended VO Studio Buffer (+5 Hours)</div>
+                    <div class="config-sub">Dedicated pickup studio time buffer for post-lock dialogue tweaks</div>
+                  </div>
+                </div>
+                <div class="config-price">+$250</div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Configuration Summary & Live Calculation -->
+          <div class="config-summary-col">
+            <div class="config-summary-box">
+              <div class="summary-headline">
+                <span>Proposed Investment</span>
+                <span class="badge badge-gold">Live Estimate</span>
+              </div>
+
+              <ul class="summary-bill-items" id="billItemsList">
+                <!-- Dynamically updated -->
+              </ul>
+
+              <div class="summary-totals-block">
+                <div class="total-row">
+                  <span>Subtotal:</span>
+                  <span id="subtotalVal">$5,800</span>
+                </div>
+                <div class="total-row" style="color: var(--spruce-green);">
+                  <span>Client Partnership Incentive:</span>
+                  <span id="discountVal">-$0</span>
+                </div>
+                <div class="grand-total-row">
+                  <span>Total Investment:</span>
+                  <span class="grand-total-amount" id="grandTotalVal">$5,800</span>
+                </div>
+              </div>
+
+              <!-- Estimated Timeline & Cashflow Box -->
+              <div class="cashflow-breakdown-box">
+                <div style="font-weight: 700; color: #fff; margin-bottom: 6px;">Estimated Timeline & Milestones:</div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                  <span>Production Duration:</span>
+                  <strong style="color: var(--ice-blue);" id="estTimeline">5–6 Weeks</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span>Deposit Due at Kickoff (25%):</span>
+                  <strong style="color: var(--rocky-amber);" id="depositAmount">$1,450</strong>
+                </div>
+              </div>
+
+              <button class="btn btn-gold" id="exportQuoteBtn" style="width: 100%; margin-bottom: 10px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                Generate Formal Scope Summary
+              </button>
+              <a href="#sign-off" class="btn btn-outline" style="width: 100%; font-size: 12px;">Proceed to Client Sign-Off</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: REVISIONS, QUALITY GATES & CHANGE ORDER POLICY -->
+    <section class="section" id="revisions">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Governance & Creative Alignment</span>
+          <h2 class="section-title">Revisions Policy & Quality Gates</h2>
+          <p class="section-lead">
+            Clear, transparent revision boundaries ensuring creative excellence without schedule slips or hidden fees.
+          </p>
+        </div>
+
+        <!-- 5 Review Gates -->
+        <div class="gates-timeline-row">
+          <div class="gate-card">
+            <div class="gate-badge">Gate 01</div>
+            <div class="gate-title">Script & Storyboard Lock</div>
+            <div class="gate-rule">
+              <strong>2 rounds of revisions included.</strong> Covers panel staging, visual gags, and dialogue flow. Once approved, the script & visual beats are locked.
+            </div>
+          </div>
+
+          <div class="gate-card">
+            <div class="gate-badge">Gate 02</div>
+            <div class="gate-title">Visual Assets & Rigs Lock</div>
+            <div class="gate-rule">
+              <strong>2 rounds of revisions included.</strong> Covers character proportions, color palette bibles, and painted forest backgrounds.
+            </div>
+          </div>
+
+          <div class="gate-card">
+            <div class="gate-badge">Gate 03</div>
+            <div class="gate-title">Voice Acting & Timing Lock</div>
+            <div class="gate-rule">
+              <strong>2 rounds of pronunciation pickups.</strong> Audio timing and dialogue cuts locked before keyframing begins to prevent discarded animation.
+            </div>
+          </div>
+
+          <div class="gate-card">
+            <div class="gate-badge">Gate 04</div>
+            <div class="gate-title">Rough Animation Review</div>
+            <div class="gate-rule">
+              <strong>2 rounds of revisions included.</strong> Covers key poses, timing, lip sync, and emotional nuance before final ink cleanup & VFX.
+            </div>
+          </div>
+
+          <div class="gate-card">
+            <div class="gate-badge">Gate 05</div>
+            <div class="gate-title">Final Color & Sound Master</div>
+            <div class="gate-rule">
+              <strong>1 final review pass.</strong> Minor color grading, lighting glow balances, and sound mix level checks prior to 4K archival master delivery.
+            </div>
+          </div>
+        </div>
+
+        <!-- Out of Scope & Change Orders -->
+        <div class="glass-card" style="margin-top: 24px; border-color: rgba(239, 68, 68, 0.3);">
+          <h4 style="color: #fff; margin-bottom: 8px; font-size: 15px; display: flex; align-items: center; gap: 8px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Change Orders & Out-of-Scope Alterations
+          </h4>
+          <p style="font-size: 12px; color: var(--text-light); line-height: 1.6;">
+            A change order occurs if fundamental changes are requested <em>after</em> a gate has been locked (e.g., rewriting script dialogue after voice recording is finalized, or re-boarding scenes after rough animation is complete). Out-of-scope work is billed transparently at pre-negotiated hourly rates:
+            <strong>2D Animation Rework: $85/hr</strong> • <strong>Background Repainting: $65/hr</strong> • <strong>Audio Re-Mix: $75/hr</strong>. All change orders require written client authorization via Account Manager Ayaz before execution.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: PRODUCTION TIMELINE & MILESTONES SCHEDULE -->
+    <section class="section" id="timeline">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Roadmap to Delivery</span>
+          <h2 class="section-title">Production Timeline & Milestones Schedule</h2>
+          <p class="section-lead">
+            Structured week-by-week delivery cadence engineered to hit target Q4 holiday premiere windows.
+          </p>
+        </div>
+
+        <div class="glass-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+            <div style="font-weight: 700; color: #fff; font-size: 15px;">Project Progression Roadmap (Pilot / Vertical Series)</div>
+            <div style="font-size: 12px; color: var(--text-gold);">Total Estimated Duration: 7 to 10 Weeks</div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <!-- Week 1-2 -->
+            <div style="background: rgba(255, 255, 255, 0.02); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+              <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 4px;">
+                <span>Weeks 1–2: Visual Dev & Storyboard Kickoff</span>
+                <span class="badge badge-blue">Milestone 1</span>
+              </div>
+              <div style="font-size: 12px; color: var(--text-muted);">
+                Script adaptation into beat-by-beat storyboard. Character model turnarounds for Rocky, Bruce, AJ, and Mary Louise. Initial color scripts.
+              </div>
+            </div>
+
+            <!-- Week 3-4 -->
+            <div style="background: rgba(255, 255, 255, 0.02); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+              <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 4px;">
+                <span>Weeks 3–4: Voice Casting & Animatic Lock</span>
+                <span class="badge badge-gold">Milestone 2 (Gate Lock)</span>
+              </div>
+              <div style="font-size: 12px; color: var(--text-muted);">
+                Studio recording of character voice-over tracks. Sound timed to storyboard panels. Client animatic review and pacing lock.
+              </div>
+            </div>
+
+            <!-- Week 5-7 -->
+            <div style="background: rgba(255, 255, 255, 0.02); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+              <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 4px;">
+                <span>Weeks 5–7: 2D Animation & Matte Painting</span>
+                <span class="badge badge-spruce">Milestone 3</span>
+              </div>
+              <div style="font-size: 12px; color: var(--text-muted);">
+                Keyframe character acting, secondary needle motion, snow interaction. Final 4K painted forest & NYC backgrounds. Rough animation pass review.
+              </div>
+            </div>
+
+            <!-- Week 8-10 -->
+            <div style="background: rgba(255, 255, 255, 0.02); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+              <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 4px;">
+                <span>Weeks 8–10: Compositing, Score Mastering & Final Hand-Off</span>
+                <span class="badge badge-gold">Milestone 4 (Final Delivery)</span>
+              </div>
+              <div style="font-size: 12px; color: var(--text-muted);">
+                Lighting passes, glow FX on Rockefeller Center tree lights, orchestral score sync, 5.1/Stereo audio mixdown. Delivery of master ProRes 4444 files and social cutdowns.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11: ACCOUNT MANAGEMENT & CLIENT SIGN-OFF PORTAL -->
+    <section class="section" id="sign-off">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Execution Authorization</span>
+          <h2 class="section-title">Account Management & Client Sign-Off</h2>
+          <p class="section-lead">
+            Authorize your selected Scope of Work to begin pre-production under the management of Neo Gen Technologies.
+          </p>
+        </div>
+
+        <div class="sign-off-card">
+          <div style="border-bottom: 1px solid var(--border-subtle); padding-bottom: 18px; margin-bottom: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 14px;">
+              <div>
+                <h3 style="color: #fff; font-size: 20px;">Project Approval & Countersignature Protocol</h3>
+                <p style="font-size: 12px; color: var(--text-muted);">Document Ref: NGT-SOW-2026-ROCKY-V1 • Prepared for Jennie E. Nicassio (Nieje Productions)</p>
+              </div>
+              <div style="text-align: right;">
+                <span class="badge badge-gold">Account Manager: Ayaz</span>
+                <div style="font-size: 11px; color: var(--ice-blue); margin-top: 4px;">ayaz@neogentechnologies.com</div>
+              </div>
+            </div>
+          </div>
+
+          <form id="signOffForm">
+            <div class="sign-off-grid">
+              <!-- Left Column: Form Info -->
+              <div>
+                <div class="form-group">
+                  <label class="form-label" for="signerName">Authorized Signatory Name *</label>
+                  <input type="text" id="signerName" class="form-control" value="Jennie E. Nicassio" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="signerEmail">Signatory Email Address *</label>
+                  <input type="email" id="signerEmail" class="form-control" value="Jennie3963@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="organizationName">Production Entity / Author Brand</label>
+                  <input type="text" id="organizationName" class="form-control" value="Nieje Productions" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="clientNotes">Production Notes or Specific Preferences</label>
+                  <textarea id="clientNotes" class="form-control" rows="3" placeholder="Add any special casting notes, target holiday release dates, or publisher collaboration details..."></textarea>
+                </div>
+
+                <div class="form-group" style="margin-top: 18px;">
+                  <label style="display: flex; align-items: flex-start; gap: 10px; font-size: 12px; color: var(--text-light); cursor: pointer;">
+                    <input type="checkbox" id="termsCheck" required style="margin-top: 3px; accent-color: var(--spruce-green); width: 16px; height: 16px;">
+                    <span>
+                      I hereby approve the Scope of Work and authorized deliverables configured above for <em>Rocky – The Rockefeller Christmas Tree</em>, subject to Neo Gen Technologies' standard production milestone gates and revision terms.
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Right Column: Digital Signature Canvas -->
+              <div>
+                <label class="form-label">Digital Signature Authorization</label>
+                <div class="signature-pad-container">
+                  <canvas id="signature-canvas"></canvas>
+                  <div class="sig-actions">
+                    <span>Draw your signature above using mouse or touch</span>
+                    <button type="button" class="btn btn-outline btn-sm" id="clearSigBtn" style="padding: 3px 8px; font-size: 10px;">Clear</button>
+                  </div>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-subtle); padding: 14px; border-radius: var(--radius-sm); margin-bottom: 20px;">
+                  <div style="font-size: 12px; color: #fff; font-weight: 600; margin-bottom: 4px;">Configured SOW Package:</div>
+                  <div style="font-size: 13px; color: var(--rocky-amber); font-weight: 700;" id="signoffPkgSummary">
+                    Festival Proof-of-Concept Pilot + Pro Indie Cast
+                  </div>
+                  <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">
+                    Total Budget: <strong style="color: #fff;" id="signoffTotalSummary">$5,800</strong> • Deposit (25%): <strong style="color: var(--ice-blue);" id="signoffDepositSummary">$1,450</strong>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-gold" id="submitSignOffBtn" style="width: 100%; padding: 14px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                  Submit & Authorize Scope of Work
+                </button>
+
+                <div style="text-align: center; margin-top: 10px; font-size: 11px; color: var(--text-muted);">
+                  Submission will notify Account Manager <strong>ayaz@neogentechnologies.com</strong> immediately.
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FORMAL SUMMARY MODAL -->
+  <div class="modal-overlay" id="quoteModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeModalBtn">&times;</button>
+      
+      <div style="border-bottom: 1px solid var(--border-subtle); padding-bottom: 16px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <span class="badge badge-gold" id="modalQuoteId">PROPOSAL SUMMARY</span>
+          <h3 style="color: #fff; font-size: 20px; margin-top: 6px;">Rocky - The Rockefeller Christmas Tree</h3>
+        </div>
+        <img src="/assets/neogen_technologies_logo.png" alt="Neo Gen Logo" style="height: 36px;">
+      </div>
+
+      <div id="modalQuoteContent">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px;">
+        <button class="btn btn-outline" id="printModalBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+          Print Formal SOW
+        </button>
+        <button class="btn btn-gold" id="proceedToSignModalBtn">Proceed to Sign-Off</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-msg" id="toastMsg">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <span id="toastText">Action completed successfully.</span>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <img src="/assets/neogen_technologies_logo.png" alt="Neo Gen Technologies" style="height: 32px;">
+            <span style="font-weight: 700; color: #fff; font-size: 16px;">NEO GEN TECHNOLOGIES</span>
+          </div>
+          <p>
+            Pioneering next-generation animation, high-retention serialized video production, and algorithmic digital media publishing. Bringing iconic stories to audiences worldwide.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Account Management</h4>
+          <p>
+            <strong>Ayaz</strong> — Senior Account Manager<br>
+            Direct: <a href="mailto:ayaz@neogentechnologies.com" style="color: var(--ice-blue);">ayaz@neogentechnologies.com</a><br>
+            Creative & Animation Division<br>
+            Neo Gen Technologies
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client & IP Credentials</h4>
+          <p>
+            <strong>Jennie E. Nicassio</strong><br>
+            Author, Screenwriter & Series Creator<br>
+            <strong>Nieje Productions</strong><br>
+            Book: <em>Rocky: The Rockefeller Christmas Tree</em><br>
+            ISBN: 979-8-218-55830-7
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 Neo Gen Technologies. All Rights Reserved. Prepared exclusively for Jennie E. Nicassio & Nieje Productions.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive JavaScript Application -->
+  <script src="/js/app.js"></script>
+</body>
+</html>

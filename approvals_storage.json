@@ -1,0 +1,29 @@
+[
+  {
+    "id": "SOW-SIGN-MU748O75",
+    "signerName": "Jennie E. Nicassio",
+    "signerEmail": "Jennie3963@gmail.com",
+    "organization": "Nieje Productions",
+    "signatureImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
+    "notes": "Looking forward to holiday Q4 rollout.",
+    "selectedConfig": {
+      "baseName": "30-Episode Vertical Micro-Drama Series (9:16)",
+      "basePrice": 28500,
+      "voName": "Pro Indie Multi-Voice Ensemble (3 Actors)",
+      "voPrice": 3800,
+      "addons": [
+        {
+          "name": "YouTube 6-Month Campaign",
+          "price": 9900
+        }
+      ],
+      "total": 40700,
+      "deposit": 10175,
+      "id": "QTE-MU748O74",
+      "savedAt": "2026-09-18T15:31:06.496Z"
+    },
+    "accountManager": "ayaz@neogentechnologies.com",
+    "signedAt": "2026-09-18T15:31:06.497Z",
+    "status": "Countersignature Pending Account Manager Review"
+  }
+]
