@@ -1997,7 +1997,7 @@ h1, h2, h3, h4, h5 {
   .mobile-toggle-btn {
     display: flex;
   }
-  .btn-text-pdf {
+  .btn-text-pptx {
     display: none;
   }
   .hero-grid, .exec-grid, .dual-track-container, .yt-strategy-grid, .configurator-wrapper, .sign-off-grid {
@@ -2997,47 +2997,4 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-/* PRINT STYLESHEET (CLEAN FORMAL PROPOSAL PDF) */
-@media print {
-  body {
-    background: #ffffff !important;
-    color: #111827 !important;
-    font-size: 11pt;
-  }
-  #snow-canvas, .site-header, .header-actions, .btn, .config-radio-left input, .signature-pad-container, .toast-msg, .modal-overlay, .scroll-progress-bar {
-    display: none !important;
-  }
-  .container {
-    max-width: 100% !important;
-    padding: 0 !important;
-  }
-  .glass-card, .hero-visual-card, .track-card, .pricing-card, .configurator-wrapper, .sign-off-card {
-    background: #ffffff !important;
-    border: 1px solid #d1d5db !important;
-    color: #111827 !important;
-    box-shadow: none !important;
-    page-break-inside: avoid;
-  }
-  h1, h2, h3, h4 {
-    color: #111827 !important;
-  }
-  .gradient-text-gold, .gradient-text-blue, .gradient-text-spruce {
-    -webkit-text-fill-color: #111827 !important;
-    color: #111827 !important;
-  }
-  .text-light, .text-muted {
-    color: #4b5563 !important;
-  }
-  .custom-table th {
-    background: #f3f4f6 !important;
-    color: #111827 !important;
-  }
-  .custom-table td {
-    color: #1f2937 !important;
-    border-color: #e5e7eb !important;
-  }
-  .section {
-    padding: 24px 0 !important;
-    border-bottom: 1px solid #e5e7eb !important;
-  }
-}
+

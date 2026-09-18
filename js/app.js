@@ -146,11 +146,6 @@ function initUnifiedScrollEngine() {
       }
     }
   });
-
-  const printBtn = document.getElementById('printProposalBtn');
-  if (printBtn) {
-    printBtn.addEventListener('click', () => window.print());
-  }
 }
 
 // ==========================================
@@ -513,9 +508,15 @@ function initConfigurator() {
     const signoffTotal = document.getElementById('signoffTotalSummary');
     const signoffDeposit = document.getElementById('signoffDepositSummary');
 
-    if (signoffPkg) signoffPkg.innerText = `${currentConfig.baseName} + ${currentConfig.voName} (${currentConfig.addons.length} Add-Ons)`;
+    if (signoffPkg) {
+      if (currentConfig.addons.length > 0) {
+        signoffPkg.innerText = `${currentConfig.baseName} + ${currentConfig.voName} (${currentConfig.addons.length} Add-On${currentConfig.addons.length > 1 ? 's' : ''})`;
+      } else {
+        signoffPkg.innerText = `${currentConfig.baseName}`;
+      }
+    }
     if (signoffTotal) signoffTotal.innerText = `$${currentConfig.total.toLocaleString()}`;
-    if (signoffDeposit) signoffDeposit.innerText = `$${currentConfig.deposit.toLocaleString()}`;
+    if (signoffDeposit) signoffDeposit.innerText = `$${currentConfig.deposit.toLocaleString()} • Two 25% review gates of $${(currentConfig.total * 0.25).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
   }
 
   window.triggerConfigUpdate = updatePricing;
@@ -733,10 +734,6 @@ function initModal() {
     modal.addEventListener('click', (e) => {
       if (e.target === modal) modal.classList.remove('open');
     });
-  }
-
-  if (printModalBtn) {
-    printModalBtn.addEventListener('click', () => window.print());
   }
 
   if (proceedBtn && modal) {

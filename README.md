@@ -58,7 +58,7 @@ node server.js
 - **YouTube Channel Management Deep Dive:** Complete 8-point operational management suite and growth optimization.
 - **Production Schedule & 24/7 Support:** Mon–Fri 9am–6pm EST production schedule (Saturday & Sunday non-production) paired with dedicated 24/7 client support SLA.
 - **Client Digital Sign-Off Portal:** Direct digital signature pad and formal authorization submission system with offline local storage persistence.
-- **Executive Print / PDF Formatting:** Custom print styling that converts the dark luxury interface into an executive white-paper layout ready for physical signing or archival.
+- **Executive Master PowerPoint Presentation Deck (.pptx):** 16:9 Widescreen Hollywood pitch deck featuring embedded visual IP proofs, character dossiers, 33-beat matrix, production milestones, and formal countersignature blocks.
 
 ---
 

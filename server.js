@@ -175,6 +175,12 @@ app.post('/api/sign-off', (req, res) => {
   }
 });
 
+// Route: Download PowerPoint Deck
+app.get('/download-presentation', (req, res) => {
+  const file = path.join(__dirname, 'Rocky_The_Rockefeller_Christmas_Tree_Master_Proposal.pptx');
+  res.download(file, 'Rocky_The_Rockefeller_Christmas_Tree_Master_Proposal.pptx');
+});
+
 // Fallback route to index.html
 app.use((req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));

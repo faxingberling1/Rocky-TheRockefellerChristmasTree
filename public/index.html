@@ -58,11 +58,11 @@
           <span class="am-text">AM: <strong>Ayaz</strong></span>
         </a>
 
-        <!-- Print / PDF Button -->
-        <button class="btn btn-outline btn-sm" id="printProposalBtn" title="Print or Save as PDF">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
-          <span class="btn-text-pdf">Print / PDF</span>
-        </button>
+        <!-- Download Master PowerPoint Presentation Button -->
+        <a href="Rocky_The_Rockefeller_Christmas_Tree_Master_Proposal.pptx" download="Rocky_The_Rockefeller_Christmas_Tree_Master_Proposal.pptx" class="btn btn-gold btn-sm" id="downloadPptxBtn" title="Download Official Master PowerPoint Presentation (.pptx)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span class="btn-text-pptx">PowerPoint (.pptx)</span>
+        </a>
 
         <!-- CTA Configure Scope -->
         <a href="#configurator" class="btn btn-gold btn-sm header-cta-btn">Configure</a>
@@ -142,11 +142,14 @@
             </div>
 
             <div class="hero-cta-group">
-              <a href="#configurator" class="btn btn-gold">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                Launch Interactive Scope Builder
+              <a href="Rocky_The_Rockefeller_Christmas_Tree_Master_Proposal.pptx" download="Rocky_The_Rockefeller_Christmas_Tree_Master_Proposal.pptx" class="btn btn-gold">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download Master PowerPoint Deck (.pptx)
               </a>
-              <a href="#dual-track" class="btn btn-outline">Explore Dual-Track Strategy</a>
+              <a href="#configurator" class="btn btn-outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Configure Scope
+              </a>
             </div>
           </div>
 
@@ -173,6 +176,7 @@
             </p>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -376,7 +380,7 @@
         </div>
 
         <!-- 33-BEAT BOARD INTERACTIVE EXPLORER -->
-        <div class="glass-card" style="margin-top: 30px;">
+        <div class="glass-card beat-board-card" id="beatBoardCard" style="margin-top: 30px;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
             <div>
               <h3 style="font-size: 18px; color: #fff;">Animated Feature Beat Board (33 Sequential Beats)</h3>
@@ -2196,10 +2200,10 @@
                 <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-subtle); padding: 14px; border-radius: var(--radius-sm); margin-bottom: 20px;">
                   <div style="font-size: 12px; color: #fff; font-weight: 600; margin-bottom: 4px;">Configured SOW Package:</div>
                   <div style="font-size: 13px; color: var(--rocky-amber); font-weight: 700;" id="signoffPkgSummary">
-                    30-Episode Serialized Series (Portrait 9:16 Shorts) + Pro Indie Cast
+                    Streamline Master: Full Movie + 10 Viral Highlights (16:9 + 9:16)
                   </div>
                   <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">
-                    Total Budget: <strong style="color: #fff;" id="signoffTotalSummary">$9,700</strong> • Initial Deposit (50%): <strong style="color: var(--ice-blue);" id="signoffDepositSummary">$4,850</strong>
+                    Total Budget: <strong style="color: #fff;" id="signoffTotalSummary">$25,950</strong> &bull; Initial Deposit (50%): <strong style="color: var(--ice-blue);" id="signoffDepositSummary">$12,975</strong> &bull; Two 25% gates: $6,487.50 each
                   </div>
                 </div>
 
@@ -2236,12 +2240,12 @@
         <!-- Injected via JavaScript -->
       </div>
 
-      <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px;">
-        <button class="btn btn-outline" id="printModalBtn">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
-          Print Formal SOW
-        </button>
-        <button class="btn btn-gold" id="proceedToSignModalBtn">Proceed to Sign-Off</button>
+      <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
+        <a href="Rocky_The_Rockefeller_Christmas_Tree_Master_Proposal.pptx" download="Rocky_The_Rockefeller_Christmas_Tree_Master_Proposal.pptx" class="btn btn-gold" id="downloadModalPptxBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Master PowerPoint Deck (.pptx)
+        </a>
+        <button class="btn btn-outline" id="proceedToSignModalBtn">Proceed to Sign-Off</button>
       </div>
     </div>
   </div>
